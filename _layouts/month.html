@@ -1,0 +1,9 @@
+{% capture title %}Archive: {{ page.date | date: "%B %Y" }} | {{ site.title }}{% endcapture %}{% include header.html title = title %}
+
+    <h1>Archive: {{ page.date | date: "%B %Y" }}</h1>
+
+    {{ content }}
+
+{% include archive.html %}
+
+{% include footer.html %}

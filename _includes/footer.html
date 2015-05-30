@@ -1,0 +1,12 @@
+</div>
+
+<div class="footer" role="contentinfo">
+    <p>Copyright &copy; {{ site.title }} {{ site.posts.last.date | date: "%Y" }}&ndash;{{ site.posts.first.date | date: "%Y" }}. All rights reserved.</p>
+    <p><a href="/atom.xml">Subscribe</a> &middot; <a href="https://github.com/{{ site.github }}">GitHub</a> &middot; <a href="http://twitter.com/{{ site.twitter }}">Twitter</a></p>
+</div>
+
+{% if page.layout == 'page' or page.layout == 'post' %}<script src="/static/js/prism.js"></script>{% endif %}
+
+</body>
+
+</html>
