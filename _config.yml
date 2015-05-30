@@ -9,6 +9,10 @@ github: johnkhughes
 # Build settings
 permalink: /:year/:month/:title/
 
+exclude:
+  - LICENSE
+  - README.md
+
 defaults:
   - scope:
       path: ""
