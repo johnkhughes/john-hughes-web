@@ -8,7 +8,7 @@
     <div class="post" role="article">
         <p class="meta"><time datetime="{{ post.date | date: "%F" }}">{{ post.date | date: "%-d %b %Y" }}</time></p>
         <h2><a href="{{ post.url }}">{{ post.title | markdownify | strip_html | strip_newlines }}</a></h2>
-        <p>{{ post.excerpt | strip_html | truncatewords: 60, " &hellip;" }}</p>
+        <p>{{ post.excerpt | markdownify | strip_html | truncatewords: 60, " &hellip;" }}</p>
         <p class="more"><a href="{{ post.url }}">Read more</a></p>
     </div>
 {% endfor %}
