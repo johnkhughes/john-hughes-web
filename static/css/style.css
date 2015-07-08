@@ -303,6 +303,14 @@ article {
     background: #006ba9;
 }
 
+.more span {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+}
+
 /* Meta */
 
 .meta {
