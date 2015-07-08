@@ -1,8 +1,23 @@
+/* Defaults */
+
+article,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav {
+    display: block;
+}
+
 /* Base */
 
-body {
+html {
     font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     line-height: 1.5;
+}
+
+body {
     margin: 0;
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
@@ -18,13 +33,13 @@ a {
 
 h1 a,
 h2 a,
-.meta a,
-.footer a {
+footer a,
+.meta a {
     color: inherit;
     text-decoration: none;
 }
 
-.nav a {
+nav a {
     text-decoration: none;
 }
 
@@ -34,8 +49,8 @@ a:focus {
 
 h1 a:hover,
 h2 a:hover,
-.meta a:hover,
-.footer a:hover {
+footer a:hover,
+.meta a:hover {
     color: #07b;
 }
 
@@ -209,67 +224,63 @@ th {
 
 /* Common */
 
-figure,
-.figure {
+figure {
     margin: 1em 0;
 }
 
-figure img,
-.figure img {
+figure img {
     display: block;
     margin: 0 auto;
 }
 
-figcaption,
-.caption {
+figcaption {
     font-size: 0.875em;
     margin: 0.5em 0;
     text-align: center;
 }
 
-blockquote + figcaption,
-blockquote + .caption {
+blockquote + figcaption {
     text-align: right;
 }
 
 /* Header */
 
-.header {
+header {
     margin: 2em 0;
 }
 
-.header h1 {
+header h1 {
     font-size: 1.125em;
 }
 
-.header h1 span {
+header h1 span {
     font-weight: normal;
     letter-spacing: normal;
 }
 
-.nav {
+nav {
     margin: 0.5em 0;
 }
 
-.nav ul {
+nav ul {
     margin: 0;
     padding: 0;
 }
 
-.nav li {
+nav li {
     display: inline;
     margin-right: 0.5em;
 }
 
 /* Main */
 
-.main {
+main {
     margin: 3em 0;
 }
 
 /* Post */
 
-.post {
+article {
     margin: 2em 0;
 }
 
@@ -343,12 +354,12 @@ blockquote + .caption {
 
 /* Footer */
 
-.footer {
+footer {
     font-size: 0.875em;
     margin: 1em 0;
 }
 
-.footer p {
+footer p {
     margin: 0.5em 0;
 }
 
@@ -356,9 +367,12 @@ blockquote + .caption {
 
 @media screen {
 
-body {
+html {
     color: #333;
     font-size: 1.125em;
+}
+
+body {
     margin: 0 auto;
     max-width: 40em;
     padding: 1em;
@@ -389,9 +403,9 @@ pre samp {
 }
 
 figcaption,
-.footer,
-.caption,
-.header h1 span,
+footer,
+figcaption,
+header h1 span,
 .meta {
     color: #999;
 }
@@ -414,21 +428,21 @@ h3 {
     font-size: 1.5em;
 }
 
-.header h1,
+header h1,
 h4 {
     font-size: 1.25em;
 }
 
-.main {
+main {
     margin: 4em 0;
 }
 
-.header,
-.post {
+header,
+article {
     margin: 3em 0;
 }
 
-.footer {
+footer {
     margin: 2em 0;
 }
 
