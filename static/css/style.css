@@ -359,7 +359,7 @@ blockquote + .caption {
     }
 
     pre {
-        background: #ebebeb;
+        background: #f5f5f5;
         padding: 1em;
     }
 
@@ -404,7 +404,7 @@ blockquote + .caption {
     }
 
     .box {
-        background: #ebebeb;
+        background: #f5f5f5;
         color: #5c5c5c;
         padding: 1px 1em;
     }
@@ -543,7 +543,7 @@ blockquote + .caption {
 .token.constant,
 .token.symbol,
 .token.deleted {
-    color: #994b89;
+    color: #ac5a5e;
 }
 
 .token.selector,
@@ -552,7 +552,7 @@ blockquote + .caption {
 .token.char,
 .token.builtin,
 .token.inserted {
-    color: #377043;
+    color: #386f6b;
 }
 
 .token.operator,
@@ -560,23 +560,23 @@ blockquote + .caption {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-    color: #705f37;
+    color: #847042;
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-    color: #4b6399;
+    color: #5a72ac;
 }
 
 .token.function {
-    color: #994b4f;
+    color: #ac5a5e;
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-    color: #844f41;
+    color: #995d4d;
 }
 
 .token.important,
