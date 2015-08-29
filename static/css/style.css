@@ -303,6 +303,10 @@ blockquote + .caption {
     margin: 2em 0;
 }
 
+.more {
+    text-decoration: none;
+}
+
 /* Meta */
 
 .meta {
