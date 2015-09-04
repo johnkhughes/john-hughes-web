@@ -90,6 +90,8 @@ Compiling `main.scss` will give the same result as before, with media queries, b
 
 It's not perfect: the CSS will contain duplicate properties where the wider media queries would have overridden the narrower styles, so there could be a lot of redundant code. But the file will only ever be downloaded by an ever smaller number of IE8 users, so I think that's a small price to pay for the convenience of writing---and maintaining---a single source.
 
+**Update (4 Sep 2015):** Since writing this post, I have refined this mixin to produce [even better media queries with Sass](/2015/09/even-better-media-queries-with-sass/).
+
 [1]: http://www.lukew.com/ff/entry.asp?933
 [2]: http://bradfrost.com/blog/web/mobile-first-responsive-web-design/
 [3]: http://sass-lang.com/
