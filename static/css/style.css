@@ -464,7 +464,7 @@ blockquote + .caption {
 
 /* Media > 640px */
 
-@media all and (min-width: 640px) and (min-height: 640px) {
+@media all and (min-width: 640px) and (min-height: 480px) {
 
     h1 {
         font-size: 3em;
