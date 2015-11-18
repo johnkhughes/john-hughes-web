@@ -1,7 +1,7 @@
 /* Base */
 
 body {
-    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: "DejaVu Sans Condensed", "Helvetica Neue", sans-serif;
     line-height: 1.5;
     margin: 0;
     padding: 0;
@@ -116,7 +116,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: "Menlo", "Consolas", monospace, monospace;
+    font-family: "DejaVu Sans Mono", "Menlo", "Consolas", monospace, monospace;
     font-size: 0.875em;
 }
 
