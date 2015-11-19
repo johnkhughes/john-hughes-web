@@ -523,75 +523,142 @@ blockquote + .caption {
 
 }
 
-/* Prism */
+/* Syntax, based on bw from https://github.com/richleland/pygments-css */
 
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-    color: #5c5c5c;
+.highlight .hll {
+    background-color: #ffffcc;
 }
 
-.token.punctuation {
-    color: #5c5c5c;
-}
-
-.namespace {
-    opacity: #5c5c5c;
-}
-
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number,
-.token.constant,
-.token.symbol,
-.token.deleted {
-    color: #ac5a5e;
-}
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-    color: #386f6b;
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-    color: #847042;
-}
-
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-    color: #5a72ac;
-}
-
-.token.function {
-    color: #ac5a5e;
-}
-
-.token.regex,
-.token.important,
-.token.variable {
-    color: #995d4d;
-}
-
-.token.important,
-.token.bold {
-    font-weight: bold;
-}
-
-.token.italic {
+.highlight .c {
     font-style: italic;
 }
 
-.token.entity {
-    cursor: help;
+.highlight .err {
+    border: 1px solid #ff0000;
+}
+
+.highlight .k {
+    font-weight: bold;
+}
+
+.highlight .cm {
+    font-style: italic;
+}
+
+.highlight .c1 {
+    font-style: italic;
+}
+
+.highlight .cs {
+    font-style: italic;
+}
+
+.highlight .ge {
+    font-style: italic;
+}
+
+.highlight .gh {
+    font-weight: bold;
+}
+
+.highlight .gp {
+    font-weight: bold;
+}
+
+.highlight .gs {
+    font-weight: bold;
+}
+
+.highlight .gu {
+    font-weight: bold;
+}
+
+.highlight .kc {
+    font-weight: bold;
+}
+
+.highlight .kd {
+    font-weight: bold;
+}
+
+.highlight .kn {
+    font-weight: bold;
+}
+
+.highlight .kr {
+    font-weight: bold;
+}
+
+.highlight .s {
+    font-style: italic;
+}
+
+.highlight .nc {
+    font-weight: bold;
+}
+
+.highlight .ni {
+    font-weight: bold;
+}
+
+.highlight .ne {
+    font-weight: bold;
+}
+
+.highlight .nn {
+    font-weight: bold;
+}
+
+.highlight .nt {
+    font-weight: bold;
+}
+
+.highlight .ow {
+    font-weight: bold;
+}
+
+.highlight .sb {
+    font-style: italic;
+}
+
+.highlight .sc {
+    font-style: italic;
+}
+
+.highlight .sd {
+    font-style: italic;
+}
+
+.highlight .s2 {
+    font-style: italic;
+}
+
+.highlight .se {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.highlight .sh {
+    font-style: italic;
+}
+
+.highlight .si {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.highlight .sx {
+    font-style: italic;
+}
+
+.highlight .sr {
+    font-style: italic;
+}
+
+.highlight .s1 {
+    font-style: italic;
+}
+
+.highlight .ss {
+    font-style: italic;
 }
