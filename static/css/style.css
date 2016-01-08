@@ -14,15 +14,11 @@ body {
 /* Links */
 
 a {
-    color: #772953;
+    color: #438550;
 }
 
 a:focus {
     outline: 1px dotted;
-}
-
-a:hover {
-    color: #925375;
 }
 
 h1 a,
@@ -33,9 +29,11 @@ h2 a,
     text-decoration: none;
 }
 
+h1 a:hover,
+h2 a:hover,
 .meta a:hover,
 .footer a:hover {
-    color: #772953;
+    color: #438550;
 }
 
 /* Typography */
@@ -228,7 +226,7 @@ blockquote + .caption {
 /* Buttons */
 
 .button {
-    background: #925375;
+    background: #438550;
     color: #fff;
     display: inline-block;
     font-weight: bold;
@@ -239,12 +237,11 @@ blockquote + .caption {
 
 .button:focus,
 .button:hover {
-    background: #9F6986;
-    color: #fff;
+    background: #569162;
 }
 
 .button:active {
-    background: #843E64;
+    background: #3c7848;
 }
 
 /* Header */
@@ -371,7 +368,7 @@ blockquote + .caption {
     }
 
     .header {
-        background: #925375;
+        background: #438550;
         color: #fff;
     }
 
