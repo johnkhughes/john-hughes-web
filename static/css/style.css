@@ -1,7 +1,11 @@
+/* Fonts */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700|Roboto+Mono|Roboto+Slab:700);
+
 /* Base */
 
 body {
-    font-family: "DejaVu Sans Condensed", "Helvetica Neue", sans-serif;
+    font-family: "Roboto", sans-serif;
     line-height: 1.5;
     margin: 0;
     padding: 0;
@@ -14,7 +18,7 @@ body {
 /* Links */
 
 a {
-    color: #438550;
+    color: #6f537f;
 }
 
 a:focus {
@@ -33,7 +37,7 @@ h1 a:hover,
 h2 a:hover,
 .meta a:hover,
 .footer a:hover {
-    color: #438550;
+    color: #6f537f;
 }
 
 /* Typography */
@@ -45,7 +49,6 @@ h4,
 h5,
 h6 {
     font-size: 1em;
-    letter-spacing: -0.025em;
     line-height: 1.25;
     margin: 1em 0 0 0;
     page-break-after: avoid;
@@ -69,12 +72,12 @@ h4 {
 
 hr {
     border: 0;
-    border-top: 0.25em solid;
+    border-top: 1px solid;
     margin: 2em 0;
 }
 
 blockquote {
-    border-left: 0.25em solid;
+    border-left: 1px solid;
     margin: 1em;
     padding: 0 1em;
 }
@@ -116,7 +119,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: "DejaVu Sans Mono", "Menlo", "Consolas", monospace, monospace;
+    font-family: "Roboto Mono", monospace, monospace;
     font-size: 0.875em;
 }
 
@@ -209,13 +212,14 @@ th {
 }
 
 .figure img {
+    border: 1px solid;
     display: block;
     margin: 0 auto;
 }
 
 .caption {
     font-size: 0.875em;
-    margin: 0.5em 0;
+    margin: 1em 0;
     text-align: center;
 }
 
@@ -226,53 +230,52 @@ blockquote + .caption {
 /* Buttons */
 
 .button {
-    background: #438550;
+    background: #4f3b5b;
     color: #fff;
     display: inline-block;
     font-weight: bold;
-    letter-spacing: -0.025em;
     padding: 0.5em 1em;
     text-decoration: none;
 }
 
 .button:focus,
 .button:hover {
-    background: #569162;
+    background: #6f537f;
 }
 
 .button:active {
-    background: #3c7848;
+    background: #3d2e46;
 }
 
 /* Header */
 
-.header {
-    font-size: 1.125em;
-    font-weight: bold;
-    letter-spacing: -0.025em;
-    line-height: 1.25;
-    overflow: hidden;
+.header::after {
+    clear: both;
+    content: "";
+    display: block;
 }
 
 .header a {
     color: inherit;
-    display: block;
     text-decoration: none;
 }
 
-.header a:focus,
-.header a:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: inherit;
-    outline: 0;
-}
-
 .header h1 {
-    font-size: inherit;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 1.25em;
     margin: 0;
 }
 
+.header h1 a:focus,
+.header h1 a:hover {
+    color: inherit;
+}
+
 /* Navigation */
+
+.nav {
+    margin-top: 0.5em;
+}
 
 .nav ul {
     margin: 0;
@@ -280,7 +283,17 @@ blockquote + .caption {
 }
 
 .nav li {
-    display: block;
+    display: inline;
+    margin: 0 0.5em;
+}
+
+.nav a {
+    opacity: 0.75;
+}
+
+.nav a:focus,
+.nav a:hover {
+    opacity: 1;
 }
 
 /* Main */
@@ -288,7 +301,6 @@ blockquote + .caption {
 .box {
     font-size: 1.125em;
     font-weight: bold;
-    letter-spacing: -0.025em;
     line-height: 1.25;
     margin: 2em 0;
 }
@@ -345,90 +357,52 @@ blockquote + .caption {
 /* Screen */
 
 @media screen {
+    html {
+        font-size: 1.125em;
+    }
 
     body {
-        color: #333;
-        font-size: 1.125em;
+        color: #444;
     }
 
     .wrap {
         margin: 0 auto;
-        max-width: 800px;
-        padding: 0 15px;
-    }
-
-    hr,
-    blockquote {
-        border-color: #d6d6d6;
+        max-width: 40rem;
+        padding: 0 1rem;
     }
 
     pre {
-        background: #f5f5f5;
+        background: #444;
+        color: #fff;
         padding: 1em;
     }
 
     .header {
-        background: #438550;
+        background: #4f3b5b;
         color: #fff;
+        padding: 1em 0;
+        text-align: center;
     }
 
-    .header h1 {
-        float: left;
-    }
-
-    .header h1 a {
-        margin-left: -15px;
-        padding: 15px;
-    }
-
-    .nav ul {
-        clear: both;
-    }
-
-    .nav.hidden ul {
-        display: none;
-    }
-
-    .nav a {
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-        color: rgba(255, 255, 255, 0.8);
-        margin: 0 -15px;
-        padding: 15px;
-    }
-
-    .nav > a {
-        border: 0;
-        float: right;
-    }
-
+    .box,
     .caption,
     .meta,
     .footer {
-        color: #5c5c5c;
+        color: #696969;
     }
-
-    .box {
-        background: #f5f5f5;
-        color: #5c5c5c;
-        padding: 1px 1em;
-    }
-
-}
+gg}
 
 /* Print */
 
 @media print {
-
     .nav {
         display: none;
     }
-
 }
 
-/* Media > 480px */
+/* Media > 30em */
 
-@media all and (min-width: 480px) and (min-height: 320px) {
-
+@media all and (min-width: 30em) and (min-height: 20em) {
     h1 {
         font-size: 2.5em;
     }
@@ -437,14 +411,31 @@ blockquote + .caption {
         font-size: 2em;
     }
 
-    h3 {
+    h3,
+    .header h1 {
         font-size: 1.5em;
     }
 
     h4,
-    .header,
     .box {
         font-size: 1.25em;
+    }
+
+    .header {
+        padding: 1.25em 0;
+    }
+
+    .header h1 {
+        float: left;
+    }
+
+    .nav {
+        float: right;
+        margin-top: 0.25em;
+    }
+
+    .nav li {
+        margin: 0 0 0 1em;
     }
 
     .main {
@@ -459,13 +450,11 @@ blockquote + .caption {
     .footer {
         margin: 2em 0;
     }
-
 }
 
-/* Media > 640px */
+/* Media > 40em */
 
-@media all and (min-width: 640px) and (min-height: 480px) {
-
+@media all and (min-width: 40em) and (min-height: 30em) {
     h1 {
         font-size: 3em;
     }
@@ -474,191 +463,22 @@ blockquote + .caption {
         font-size: 2.25em;
     }
 
-    h3 {
+    h3,
+    .header h1 {
         font-size: 1.75em;
     }
 
     h4,
-    .header,
     .box {
         font-size: 1.333em;
     }
 
-    .header h1 a,
-    .nav a {
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
     .nav {
-        float: right;
-        margin-right: -15px;
-    }
-
-    .nav ul {
-        clear: none;
-    }
-
-    .nav.hidden ul {
-        display: block;
-    }
-
-    .nav li {
-        float: left;
-    }
-
-    .nav a {
-        border: 0;
-        margin: 0;
-    }
-
-    .nav > a {
-        display: none;
+        margin-top: 0.375em;
     }
 
     .box,
     .article {
         margin: 4em 0;
     }
-
-}
-
-/* Syntax, based on bw from https://github.com/richleland/pygments-css */
-
-.highlight .hll {
-    background-color: #ffffcc;
-}
-
-.highlight .c {
-    font-style: italic;
-}
-
-.highlight .err {
-    border: 1px solid #ff0000;
-}
-
-.highlight .k {
-    font-weight: bold;
-}
-
-.highlight .cm {
-    font-style: italic;
-}
-
-.highlight .c1 {
-    font-style: italic;
-}
-
-.highlight .cs {
-    font-style: italic;
-}
-
-.highlight .ge {
-    font-style: italic;
-}
-
-.highlight .gh {
-    font-weight: bold;
-}
-
-.highlight .gp {
-    font-weight: bold;
-}
-
-.highlight .gs {
-    font-weight: bold;
-}
-
-.highlight .gu {
-    font-weight: bold;
-}
-
-.highlight .kc {
-    font-weight: bold;
-}
-
-.highlight .kd {
-    font-weight: bold;
-}
-
-.highlight .kn {
-    font-weight: bold;
-}
-
-.highlight .kr {
-    font-weight: bold;
-}
-
-.highlight .s {
-    font-style: italic;
-}
-
-.highlight .nc {
-    font-weight: bold;
-}
-
-.highlight .ni {
-    font-weight: bold;
-}
-
-.highlight .ne {
-    font-weight: bold;
-}
-
-.highlight .nn {
-    font-weight: bold;
-}
-
-.highlight .nt {
-    font-weight: bold;
-}
-
-.highlight .ow {
-    font-weight: bold;
-}
-
-.highlight .sb {
-    font-style: italic;
-}
-
-.highlight .sc {
-    font-style: italic;
-}
-
-.highlight .sd {
-    font-style: italic;
-}
-
-.highlight .s2 {
-    font-style: italic;
-}
-
-.highlight .se {
-    font-style: italic;
-    font-weight: bold;
-}
-
-.highlight .sh {
-    font-style: italic;
-}
-
-.highlight .si {
-    font-style: italic;
-    font-weight: bold;
-}
-
-.highlight .sx {
-    font-style: italic;
-}
-
-.highlight .sr {
-    font-style: italic;
-}
-
-.highlight .s1 {
-    font-style: italic;
-}
-
-.highlight .ss {
-    font-style: italic;
 }
