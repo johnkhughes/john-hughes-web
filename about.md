@@ -1,5 +1,6 @@
 ---
 title: About
+permalink: /about/
 ---
 
 Hello. My name is John Hughes and I am a web developer living in York in the UK. This is my personal site where I write about web design and development and anything else I find interesting. It is also where I experiment with new design ideas and code. I probably update the code more than I update the content, so expect frequent changes and more than a few rough edges.
