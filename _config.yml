@@ -7,7 +7,7 @@ twitter: johnkhughes
 github: johnkhughes
 
 # Build settings
-permalink: /:year/:month/:title/
+permalink: /:year/:month/:title
 
 exclude:
   - LICENSE
