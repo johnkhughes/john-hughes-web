@@ -227,6 +227,7 @@ blockquote + .caption {
 
 .button {
     background: #4f3b5b;
+    border-radius: 0.25rem;
     color: #fff;
     display: inline-block;
     font-weight: bold;
