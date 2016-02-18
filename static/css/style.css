@@ -369,8 +369,7 @@ blockquote + .caption {
     }
 
     pre {
-        background: #444;
-        color: #fff;
+        background: #f6f6f6;
         padding: 1em;
     }
 
@@ -387,7 +386,7 @@ blockquote + .caption {
     .footer {
         color: #696969;
     }
-gg}
+}
 
 /* Print */
 
@@ -478,4 +477,78 @@ gg}
     .article {
         margin: 4em 0;
     }
+}
+
+/* Prism */
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #696969;
+    font-style: italic;
+}
+
+.token.punctuation {
+    color: #696969;
+}
+
+.namespace {
+    opacity: 0.75;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #8959a8;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #556a00;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #ae5808;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #4271ae;
+}
+
+.token.function {
+    color: #c82829;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #8e6f00;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
 }
