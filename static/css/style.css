@@ -527,17 +527,17 @@ blockquote + .caption {
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-    color: #4271ae;
+    color: #8959a8;
 }
 
 .token.function {
-    color: #c82829;
+    color: #4271ae;
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-    color: #8e6f00;
+    color: #c82829;
 }
 
 .token.important,
