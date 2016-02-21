@@ -1,20 +1,14 @@
-module Jekyll
-  class NormalizeFigures < Converter
-    safe true
-    priority :low
+# Convert figures to HTML4 elements for backward compatibility
+Jekyll::Hooks.register :posts, :post_render do |post|
+  original = post.content
+  patterns = [
+    /<((figure)).*?>(.*?)<\/\1>/m,
+    /<(fig(caption)).*?>(.*?)<\/\1>/m
+  ]
 
-    def matches(ext)
-      true
-    end
-
-    def output_ext(ext)
-      ".html"
-    end
-
-    def convert(content)
-      content
-        .gsub(/<(figure).*?>(.*?)<\/\1>/m, '<div class="\1">\2</div>')
-        .gsub(/<(fig(caption)).*?>(.*?)<\/\1>/m, '<div class="\2">\3</div>')
-    end
+  patterns.each do |pattern|
+    post.content = post.content.gsub(pattern, '<div class="\2">\3</div>')
   end
+
+  post.output = post.output.sub(original, post.content)
 end
