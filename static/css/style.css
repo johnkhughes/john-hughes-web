@@ -479,76 +479,94 @@ blockquote + .caption {
     }
 }
 
-/* Prism */
+/* Syntax */
 
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-    color: #696969;
+.highlight .ge {
     font-style: italic;
 }
 
-.token.punctuation {
-    color: #696969;
-}
-
-.namespace {
-    opacity: 0.75;
-}
-
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number,
-.token.constant,
-.token.symbol,
-.token.deleted {
-    color: #8959a8;
-}
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-    color: #556a00;
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-    color: #ae5808;
-}
-
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-    color: #8959a8;
-}
-
-.token.function {
-    color: #4271ae;
-}
-
-.token.regex,
-.token.important,
-.token.variable {
-    color: #c82829;
-}
-
-.token.important,
-.token.bold {
+.highlight .gh,
+.highlight .gp,
+.highlight .gs,
+.highlight .gu {
     font-weight: bold;
 }
 
-.token.italic {
-    font-style: italic;
+.highlight .hll {
+    background-color: #ececec;
 }
 
-.token.entity {
-    cursor: help;
+.highlight .kn,
+.highlight .nd,
+.highlight .nt,
+.highlight .o,
+.highlight .ow,
+.highlight .gu {
+    color: #348187;
+}
+
+.highlight .na,
+.highlight .nf,
+.highlight .nx {
+    color: #4271ae;
+}
+
+.highlight .gi,
+.highlight .ld,
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .sb,
+.highlight .sh,
+.highlight .sr,
+.highlight .ss,
+.highlight .sx {
+    color: #556a00;
+}
+
+.highlight .k,
+.highlight .kc,
+.highlight .kd,
+.highlight .kp,
+.highlight .kr {
+    color: #8959a8;
+}
+
+.highlight .c,
+.highlight .c1,
+.highlight .cm,
+.highlight .cp,
+.highlight .cs,
+.highlight .sd,
+.highlight .gp {
+    color: #696969;
+}
+
+.highlight .err,
+.highlight .gd,
+.highlight .ne,
+.highlight .no,
+.highlight .nv,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi {
+    color: #c82829;
+}
+
+.highlight .kt,
+.highlight .nc,
+.highlight .nn {
+    color: #8e6f00;
+}
+
+.highlight .il,
+.highlight .l,
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo,
+.highlight .se,
+.highlight .si {
+    color: #ae5808;
 }

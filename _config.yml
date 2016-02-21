@@ -26,7 +26,6 @@ defaults:
       layout: "page"
 
 markdown: kramdown
-highlighter: false
 
 kramdown:
   auto_ids: false
