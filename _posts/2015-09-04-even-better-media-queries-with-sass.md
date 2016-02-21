@@ -11,7 +11,6 @@ This is a refinement of my previous Sass media query mixin, using an array of va
 
 ~~~~~~~~ scss
 @mixin media($name, $ie: true, $prefix: min) {
-
     $env: 'main' !default;
     $sizes: (small: 30em, medium: 40em, large: 60em);
 
@@ -20,7 +19,6 @@ This is a refinement of my previous Sass media query mixin, using an array of va
     }
 
     @else {
-
         $size: map-get($sizes, $name);
 
         @if $prefix != min {
@@ -30,9 +28,7 @@ This is a refinement of my previous Sass media query mixin, using an array of va
         @media screen and (#{$prefix}-width: #{$size}) {
             @content;
         }
-
     }
-
 }
 ~~~~~~~~
 
@@ -55,7 +51,6 @@ If you have already given up on browsers that don't support media queries, the m
 
 ~~~~~~~~ scss
 @mixin media($name, $prefix: min) {
-
     $sizes: (small: 30em, medium: 40em, large: 60em);
     $size: map-get($sizes, $name);
 
@@ -66,7 +61,6 @@ If you have already given up on browsers that don't support media queries, the m
     @media screen and (#{$prefix}-width: #{$size}) {
         @content;
     }
-
 }
 ~~~~~~~~
 

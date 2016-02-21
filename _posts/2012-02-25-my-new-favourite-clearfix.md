@@ -13,7 +13,7 @@ The technique uses the `:after` pseudo-element:
 ~~~~~~~~ css
 .clearfix:after {
     clear: both;
-    content: " ";
+    content: "";
     display: block;
 }
 ~~~~~~~~

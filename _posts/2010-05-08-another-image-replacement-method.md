@@ -17,7 +17,7 @@ h1 {
 }
 
 h1:before {
-    content: url("image.png");
+    content: url(image.png);
     height: 100%;
     position: absolute;
 }

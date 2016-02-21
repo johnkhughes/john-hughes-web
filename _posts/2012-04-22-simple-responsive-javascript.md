@@ -26,11 +26,9 @@ Because I am going to use a [mobile first](http://stuffandnonsense.co.uk/project
 
 ~~~~~~~~ css
 @media screen {
-
     .nav li {
         display: block;
     }
-
 }
 ~~~~~~~~
 
@@ -38,11 +36,9 @@ On larger screens, the menu will be converted into a horizontal list:
 
 ~~~~~~~~ css
 @media screen and (min-width: 60em) {
-
     .nav li {
         display: inline;
     }
-
 }
 ~~~~~~~~
 
@@ -77,11 +73,9 @@ The toggle control only needs to be visible on small screens, so I can now hide 
 
 ~~~~~~~~ css
 @media screen and (min-width: 60em) {
-
     .mq-control {
         display: none;
     }
-
 }
 ~~~~~~~~
 
@@ -109,19 +103,15 @@ In this case, the text of the link is also updated. For this to work, this class
 
 ~~~~~~~~ css
 @media screen {
-
     .mq-small-hidden {
         display: none;
     }
-
 }
 
 @media screen and (min-width: 60em) {
-
     .mq-small-hidden {
         display: block;
     }
-
 }
 ~~~~~~~~
 

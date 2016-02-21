@@ -10,24 +10,36 @@ Hyperlinks are the most important part of any web page. A page without a link is
 
 As a web developer, writing a hyperlink to another page is probably one of the first things you learned:
 
-<pre><code class="language-html">&lt;a href="http://www.example.com/"&gt;example web page&lt;/a&gt;</code></pre>
+~~~~~~~~ html
+<a href="http://www.example.com/">example web page</a>
+~~~~~~~~
 
 And then there is the mailto: protocol for linking to an email address:
 
-<pre><code class="language-html">&lt;a href="mailto:example@example.com"&gt;example email&lt;/a&gt;</code></pre>
+~~~~~~~~ html
+<a href="mailto:example@example.com">example email</a>
+~~~~~~~~
 
 However, did you know that you can also use mailto: links to specify multiple email addresses, subject lines, and even the text of the email itself:
 
-<pre><code class="language-html">&lt;a href="mailto:&#8203;example@example.com,&#8203;second@example.com,&#8203;third@example.com?from=fromaddress&#8203;&amp;bcc=addresslist&#8203;&amp;cc=addresslist&#8203;&amp;reply-to=address&#8203;&amp;subject=subject%20text&#8203;&amp;body=body&#8203;%20text"&gt;example email&lt;/a&gt;</code></pre>
+~~~~~~~~ html
+<a href="mailto:example@example.com,second@example.com,third@example.com?from=fromaddress&amp;bcc=addresslist&amp;cc=addresslist&amp;reply-to=address&amp;subject=subject%20text&amp;body=body%20text">example email</a>
+~~~~~~~~
 
 Smart phones provide more options, including the tel: protocol for telephone numbers. You cannot use spaces in the number, but you can add hyphens anywhere you want to make your code a bit more readable.
 
-<pre><code class="language-html">&lt;a href="tel:&#8203;+44-1234-567890"&gt;example telephone number&lt;/a&gt;</code></pre>
+~~~~~~~~ html
+<a href="tel:+44-1234-567890">example telephone number</a>
+~~~~~~~~
 And you can even use a hyperlink to send a text message:
 
-<pre><code class="language-html">&lt;a href="sms:&#8203;+44-1234-567899"&gt;text message&lt;/a&gt;</code></pre>
+~~~~~~~~ html
+<a href="sms:+44-1234-567899">text message</a>
+~~~~~~~~
 As with mailto: links, you can specify multiple recipients and text of the message itself:
 
-<pre><code class="language-html">&lt;a href="sms:&#8203;+44-1234-567890,&#8203;+44-0987-654321?body=body&#8203;%20text"&gt;example text message&lt;/a&gt;</code></pre>
+~~~~~~~~ html
+<a href="sms:+44-1234-567890,+44-0987-654321?body=body%20text">example text message</a>
+~~~~~~~~
 
 Hyperlinks have always been vital for connecting web pages together. Now you can use them to connect to things outside of the internet as well.
