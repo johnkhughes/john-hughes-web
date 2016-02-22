@@ -1,5 +1,5 @@
 # Promote or demote headings to fit document outline
-Jekyll::Hooks.register :posts, :post_render do |post|
+Jekyll::Hooks.register [:pages, :posts], :post_render do |post|
   def normalize(html, limit = 2)
     levels = (1..6)
     diff = limit - levels.find(lambda { limit }) { |n| html.match("<h#{n}") }
@@ -14,5 +14,5 @@ Jekyll::Hooks.register :posts, :post_render do |post|
 
   original = post.content
   post.content = normalize(original)
-  post.output = post.output.gsub(original, post.content)
+  post.output = post.output.sub(original, post.content)
 end

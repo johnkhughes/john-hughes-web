@@ -1,5 +1,5 @@
 # Convert figures to HTML4 elements for backward compatibility
-Jekyll::Hooks.register :posts, :post_render do |post|
+Jekyll::Hooks.register [:pages, :posts], :post_render do |post|
   original = post.content
   patterns = [
     /<((figure)).*?>(.*?)<\/\1>/m,
