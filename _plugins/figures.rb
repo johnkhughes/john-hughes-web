@@ -2,8 +2,8 @@
 Jekyll::Hooks.register [:pages, :posts], :post_render do |post|
   original = post.content
   patterns = [
-    /<((figure)).*?>(.*?)<\/\1>/m,
-    /<(fig(caption)).*?>(.*?)<\/\1>/m
+    %r{<((figure)).*?>(.*?)</\1>}m,
+    %r{<(fig(caption)).*?>(.*?)</\1>}m
   ]
 
   patterns.each do |pattern|
