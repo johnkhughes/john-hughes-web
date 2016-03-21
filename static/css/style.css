@@ -354,17 +354,13 @@ blockquote + .caption {
 /* Screen */
 
 @media screen {
-    html {
-        font-size: 1.125em;
-    }
-
     body {
         color: #444;
     }
 
     .wrap {
         margin: 0 auto;
-        max-width: 40rem;
+        max-width: 45rem;
         padding: 0 1rem;
     }
 
