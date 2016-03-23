@@ -1,5 +1,7 @@
 # Promote or demote headings to fit document outline
 Jekyll::Hooks.register([:pages, :posts], :post_render) do |post|
+  next unless ['.html', '.md'].include?(post.extname)
+
   def normalize(html, limit = 2)
     levels = (1..6)
     diff = limit - levels.detect(-> { limit }) { |n| html.match("<h#{n}") }

@@ -1,5 +1,7 @@
 # Convert figures to HTML4 elements for backward compatibility
 Jekyll::Hooks.register([:pages, :posts], :post_render) do |post|
+  next unless ['.html', '.md'].include?(post.extname)
+
   content = post.content
   patterns = [
     %r{<((figure)).*?>(.*?)</\1>}m,
