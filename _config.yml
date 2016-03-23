@@ -8,7 +8,6 @@ github: johnkhughes
 
 # Build settings
 permalink: /:year/:month/:title/
-excerpt_separator: ""
 
 exclude:
   - LICENSE

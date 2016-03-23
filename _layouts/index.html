@@ -9,7 +9,7 @@
 {% for post in site.posts limit: 20 %}
 <div class="article" role="article">
     <h2><a href="{{ post.url }}">{{ post.title | markdownify | strip_html | strip_newlines }}</a></h2>
-    <p>{% assign excerpt = post.excerpt | markdownify | strip_html | strip_newlines %}{% if post.excerpt == "" %}{% assign excerpt = post.content | split: "</p>" | first | strip_html | strip_newlines %}{% assign word_count = excerpt | number_of_words %}{% if word_count > 80 %}{% assign excerpt = excerpt | truncatewords: 60, " &hellip;" %}{% endif %}{% endif %}{{ excerpt }}{% if post.format == "link" and post.content | extract_url %} <a href="{{ post.content | extract_url }}" class="more">[Visit link]</a>{% endif %}</p>
+    <p>{{ post.excerpt | markdownify | strip_html | strip_newlines }}{% if post.format == "link" and post.content | extract_url %} <a href="{{ post.content | extract_url }}" class="more">[Visit link]</a>{% endif %}</p>
     <p class="meta"><time datetime="{{ post.date | date: "%F" }}">{{ post.date | date: "%-d %b %Y" }}</time>{% if post.categories != empty %} &middot; {% for category in post.categories %}<a href="/category/{{ category | slugify }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}</p>
 </div>
 {% endfor %}

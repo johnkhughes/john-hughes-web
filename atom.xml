@@ -25,7 +25,7 @@ permalink: /atom.xml
         <author>
             <name>{{ site.title }}</name>
         </author>
-        <summary>{{ post.excerpt | markdownify | strip_html | truncatewords: 60, " &#8230;" }}</summary>
+        <summary>{{ post.excerpt | markdownify | strip_html | strip_newlines }}</summary>
         <content type="html">{{ post.content | xml_escape }}</content>
     </entry>
 {% endfor %}
