@@ -1,5 +1,5 @@
 # Truncate any generated excerpts that exceed a particular length
-Jekyll::Hooks.register [:pages, :posts], :pre_render do |post|
+Jekyll::Hooks.register([:pages, :posts], :pre_render) do |post|
 
   # Ignore manual excerpts, which are stored as strings
   next unless post.data['excerpt'].class == Jekyll::Excerpt
