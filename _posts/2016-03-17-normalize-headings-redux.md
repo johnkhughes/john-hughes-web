@@ -29,9 +29,9 @@ function normalize($html, $limit = 2) {
         return $html;
     }
 
-    return preg_replace_callback('/(<\/?)h(\d)/', function($matches) {
+    return preg_replace_callback('/(<\/?)h(\d)/', function($matches) use ($levels, $diff) {
         $level = intval($matches[2]) + $diff;
-        return $matches[1] + (in_array($level, $levels) ? 'h' + $level : 'p');
+        return $matches[1] . (in_array($level, $levels) ? 'h' . $level : 'p');
     }, $html);
 }
 ~~~~
