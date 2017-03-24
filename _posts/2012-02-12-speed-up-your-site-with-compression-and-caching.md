@@ -7,7 +7,7 @@ excerpt: If your site is hosted on a Linux server, you might be able to speed it
 
 If your site is hosted on a Linux server, you might be able to speed it up a bit with a couple of easy `.htaccess` tricks.
 
-### Compression ###
+## Compression ##
 
 Some servers allow `gzip` compression before sending a response, which means smaller downloads for browsers. Image files are already compressed, so there is no need to use server resources to compress them. However, anything stored as plain text can be compressed based on extension:
 
@@ -19,7 +19,7 @@ They can also be compressed by content type, but this is a bit more tedious to s
 
 Unfortunately, not all servers allow compression.
 
-### Caching ###
+## Caching ##
 
 You might also be able to enable caching of static resources, so browsers do not have to download styles and images every time they access the site. Again, this can be done by extension:
 

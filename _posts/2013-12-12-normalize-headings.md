@@ -49,6 +49,6 @@ add_filter('the_content', 'normalize_headings_filter');
 
 You can grab the [source code on GitHub](https://github.com/johnkhughes/normalize-headings) and it is released under the MIT license, so you can use it and change it as much as you want.
 
-### A note on HTML5 ###
+## A note on HTML5 ##
 
 I realise that HTML5 allows you to [create an outline](http://html5doctor.com/outlines/) with `<section>` elements and whatever headings you like as a way of overcoming these sorts of problems. However, HTML5 outlines are [not exactly reliable](http://blog.paciellogroup.com/2013/10/html5-document-outline/) at the moment and it always good to use [backward compatible code](http://www.456bereastreet.com/archive/201205/make_sure_your_html5_document_outline_is_backwards_compatible/)!

@@ -8,34 +8,34 @@ excerpt: Nobody wants to make websites for Internet Explorer 6, but unfortunatel
 
 Nobody wants to make websites for Internet Explorer 6, but unfortunately we do not always have a choice. For a while now, I have been keeping a list of CSS 2.1 features absent in Internet Explorer 6 as a quick reference when I’m putting a new stylesheet together. If you have not already given up developing for this dinosaur of a browser, perhaps you too will find it useful.
 
-### Element selectors ###
+## Element selectors ##
 
 *   `e &gt; f`
 *   `e + f`
 *   `e ~ f`
 
-### Attribute selectors ###
+## Attribute selectors ##
 
 *   `e[attr]`
 *   `e[attr="value"]`
 *   `e[attr~="value"]`
 *   `e[attr|="value"]`
 
-### Pseudo-elements ###
+## Pseudo-elements ##
 
 *   `e:first-letter`
 *   `e:first-line`
 *   `e:before`
 *   `e:after`
 
-### Pseudo-classes ###
+## Pseudo-classes ##
 
 *   `e:hover`
 *   `e:focus`
 *   `e:first-child`
 *   `e:lang(en)`
 
-### Properties ###
+## Properties ##
 
 *   `min-width`
 *   `max-width`
@@ -52,7 +52,7 @@ Nobody wants to make websites for Internet Explorer 6, but unfortunately we do n
 *   `empty-cells`
 *   `outline`
 
-### Values ###
+## Values ##
 
 *   `display: table;`
 *   `display: inline-block;`
