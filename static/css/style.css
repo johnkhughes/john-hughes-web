@@ -231,7 +231,7 @@ blockquote + .caption {
     color: #fff;
     display: inline-block;
     font-weight: bold;
-    padding: 0.5em 1em;
+    padding: 0.75em 1.5em;
     text-decoration: none;
 }
 
@@ -296,20 +296,24 @@ blockquote + .caption {
 /* Main */
 
 .box {
-    font-size: 1.125em;
+    font-size: 1.25em;
     font-weight: bold;
     line-height: 1.25;
-    margin: 2em 0;
+    margin: 2rem 0;
+}
+
+.box p {
+    margin: 0.5em 0;
 }
 
 .main {
-    margin: 3em 0;
+    margin: 2rem 0 3rem 0;
 }
 
 /* Posts */
 
 .article {
-    margin: 2em 0;
+    margin: 2rem 0;
 }
 
 .more {
@@ -404,12 +408,12 @@ blockquote + .caption {
     }
 
     h3,
-    .header h1 {
+    .header h1,
+    .box {
         font-size: 1.5em;
     }
 
-    h4,
-    .box {
+    h4 {
         font-size: 1.25em;
     }
 
@@ -431,16 +435,16 @@ blockquote + .caption {
     }
 
     .main {
-        margin: 4em 0;
+        margin: 3rem 0 4rem 0;
     }
 
     .box,
     .article {
-        margin: 3em 0;
+        margin: 3rem 0;
     }
 
     .footer {
-        margin: 2em 0;
+        margin: 2rem 0;
     }
 }
 
@@ -456,12 +460,12 @@ blockquote + .caption {
     }
 
     h3,
-    .header h1 {
+    .header h1,
+    .box {
         font-size: 1.75em;
     }
 
-    h4,
-    .box {
+    h4 {
         font-size: 1.333em;
     }
 
@@ -469,9 +473,10 @@ blockquote + .caption {
         margin-top: 0.375em;
     }
 
+    .main,
     .box,
     .article {
-        margin: 4em 0;
+        margin: 4rem 0;
     }
 }
 
