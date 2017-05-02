@@ -1,0 +1,1 @@
+{% if include.post %}{% assign post = include.post %}{% endif %}<p class="meta"><time datetime="{{ post.date | date: "%F" }}">{{ post.date | date: "%-d %B %Y" }}</time>{% if post.categories != empty %} &middot; {% for category in post.categories %}<a href="/category/{{ category | slugify }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}</p>

@@ -1,0 +1,41 @@
+.button {
+    background: $purple;
+    border: 1px solid $purple;
+    border-radius: 0.25rem;
+    color: white;
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    text-decoration: none;
+    transition: background-color 200ms ease, color 200ms ease;
+
+    &:hover {
+        background: tint($purple, 10%);
+    }
+
+    &:active {
+        background: shade($purple, 10%);
+        border-color: shade($purple, 10%);
+        color: white;
+    }
+
+    &.compact {
+        font-size: 0.875rem;
+        padding: 0.5em 1em;
+    }
+
+    &.alt {
+        background: transparent;
+        color: $purple;
+
+        &:hover {
+            background: $purple;
+            color: white;
+        }
+
+        &:active {
+            background: shade($purple, 10%);
+            border-color: shade($purple, 10%);
+            color: white;
+        }
+    }
+}

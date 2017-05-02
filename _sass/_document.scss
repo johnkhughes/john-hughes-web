@@ -1,0 +1,22 @@
+// Document
+
+html {
+    font-family: "roboto", "helvetica neue", "helvetica", "arial", sans-serif;
+    line-height: 1.5;
+
+    @include media(screen) {
+        font-size: 20px;
+    }
+}
+
+body {
+    @include prefix(text-size-adjust, none);
+
+    margin: 0;
+    padding: 0;
+
+    // Screen styles
+    @include media(screen) {
+        color: $text_color;
+    }
+}

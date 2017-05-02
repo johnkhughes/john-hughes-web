@@ -1,0 +1,174 @@
+// Typography
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.25;
+    margin: 1em 0 0 0;
+    page-break-after: avoid;
+}
+
+h1 {
+    @include font-size(4);
+
+    font-weight: 300;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    @include font-size(3);
+
+    font-weight: 300;
+}
+
+h3 {
+    @include font-size(2);
+}
+
+h4 {
+    @include font-size(1);
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid $line_color;
+    margin: 2em 0;
+}
+
+blockquote {
+    border-left: 2px solid $text_color_alt;
+    margin: 1em;
+    padding: 0 1em;
+}
+
+p {
+    margin: 1em 0;
+
+    // Paragraphs preceded by subheadings
+    // h2 + &,
+    // h3 + &,
+    // h4 + &,
+    // h5 + &,
+    // h6 + & {
+    //     margin-top: 0.5em;
+    // }
+}
+
+pre {
+    background: tint($text_color, 95%);
+    margin: 1rem 0;
+    overflow: auto;
+    padding: 1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+address,
+cite,
+dfn,
+em,
+i,
+var {
+    font-style: italic;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: "roboto mono", "menlo", "consolas", "dejavu sans mono", monospace, monospace;
+    font-size: 0.875em;
+
+    // Maintain font size when mono elements are nested
+    pre & {
+        font-size: 1em;
+    }
+}
+
+small {
+    font-size: 0.75em;
+}
+
+sub,
+sup {
+    font-size: 0.75em;
+    line-height: 0;
+}
+
+sub {
+    vertical-align: sub;
+}
+
+sup {
+    vertical-align: super;
+}
+
+// Lists
+dl {
+    margin: 1em 0;
+}
+
+dd {
+    margin-left: 2em;
+}
+
+ol,
+ul {
+    margin: 1em 0;
+    padding-left: 2em;
+}
+
+ol {
+    li {
+        list-style: decimal outside none;
+
+        li {
+            list-style: lower-alpha outside none;
+
+            li {
+                list-style: lower-roman outside none;
+            }
+        }
+    }
+}
+
+ul {
+    li {
+        list-style: disc outside none;
+
+        li {
+            list-style: circle outside none;
+        }
+    }
+}
+
+// Images
+img {
+    border: 0;
+    height: auto;
+    max-width: 100%;
+}
+
+// Tables
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 1em auto;
+}
+
+td,
+th {
+    padding: 0.25em 0.5em;
+    text-align: left;
+}

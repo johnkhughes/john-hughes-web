@@ -1,9 +1,13 @@
 {% capture title %}Tag: {{ page.title }} | {{ site.title }}{% endcapture %}{% include header.html title = title %}
 
-<h1>Tag: {{ page.title }}</h1>
+<div class="content">
+    <div class="wrap">
+        <h1>Tag: {{ page.title }}</h1>
 
-{{ content }}
+        {{ content }}
 
-{% include archive.html %}
+        {% include archive.html %}
+    </div>
+</div>
 
 {% include footer.html %}

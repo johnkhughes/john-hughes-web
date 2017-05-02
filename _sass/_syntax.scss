@@ -1,0 +1,93 @@
+// Syntax highlighter
+
+.highlight {
+    .ge {
+        font-style: italic;
+    }
+
+    .gh,
+    .gp,
+    .gs,
+    .gu {
+        font-weight: bold;
+    }
+
+    .hll {
+        background-color: #ececec;
+    }
+
+    .kn,
+    .nd,
+    .nt,
+    .o,
+    .ow,
+    .gu {
+        color: #348187;
+    }
+
+    .na,
+    .nf,
+    .nx {
+        color: #4271ae;
+    }
+
+    .gi,
+    .ld,
+    .s,
+    .s1,
+    .s2,
+    .sb,
+    .sh,
+    .sr,
+    .ss,
+    .sx {
+        color: #556a00;
+    }
+
+    .k,
+    .kc,
+    .kd,
+    .kp,
+    .kr {
+        color: #8959a8;
+    }
+
+    .c,
+    .c1,
+    .cm,
+    .cp,
+    .cs,
+    .sd,
+    .gp {
+        color: #696969;
+    }
+
+    .err,
+    .gd,
+    .ne,
+    .no,
+    .nv,
+    .vc,
+    .vg,
+    .vi {
+        color: #c82829;
+    }
+
+    .kt,
+    .nc,
+    .nn {
+        color: #8e6f00;
+    }
+
+    .il,
+    .l,
+    .m,
+    .mf,
+    .mh,
+    .mi,
+    .mo,
+    .se,
+    .si {
+        color: #ae5808;
+    }
+}

@@ -1,0 +1,22 @@
+// Figures
+
+.figure {
+    margin: 1em 0;
+
+    img {
+        border: 1px solid $line_color;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .caption {
+        color: $text_color_alt;
+        font-size: 0.875em;
+        margin: 0.75rem 0;
+        text-align: center;
+    }
+
+    blockquote + .caption {
+        text-align: right;
+    }
+}

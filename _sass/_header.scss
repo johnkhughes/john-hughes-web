@@ -1,0 +1,80 @@
+.header {
+    border-bottom: 1px solid $line_color;
+    padding: 1rem 0;
+
+    @include media(all, quarto) {
+        padding: 1.25rem 0;
+    }
+
+    .wrap {
+        max-width: 60rem;
+    }
+
+    h1 {
+        @include font-size(1);
+
+        font-weight: inherit;
+        line-height: inherit;
+        margin: 0;
+
+        @include media(all, octavo) {
+            float: left;
+            font-size: inherit;
+        }
+
+        > a {
+            padding-left: 1.75rem;
+            position: relative;
+
+            &:hover {
+                &::before {
+                    transform: rotate(360deg);
+                }
+            }
+
+            &::before {
+                background-image: url(/static/images/icon.svg);
+                background-size: cover;
+                content: "";
+                height: 1.25rem;
+                left: 0;
+                margin-top: -0.675rem;
+                position: absolute;
+                top: 50%;
+                transition: transform 400ms ease;
+                width: 1.25rem;
+            }
+        }
+    }
+
+    .nav {
+        color: $text_color_alt;
+        font-size: 0.875em;
+        margin-left: 1.75rem;
+        margin-top: 0.25rem;
+
+        @include media(all, octavo) {
+            float: right;
+            font-size: inherit;
+            margin: 0;
+        }
+
+        @include media(print) {
+            display: none;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: inline;
+            margin: 0 0.5em 0 0;
+
+            @include media(all, octavo) {
+                margin: 0 0 0 1em;
+            }
+        }
+    }
+}

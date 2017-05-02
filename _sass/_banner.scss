@@ -1,0 +1,23 @@
+.banner {
+    @include font-size(2);
+
+    background: $purple;
+    background: linear-gradient(120deg, $purple, $orange);
+    color: white;
+    font-weight: 300;
+    margin-top: -1px;
+    padding: 2rem 0;
+    text-align: center;
+
+    @include media(screen, octavo) {
+        padding: 3rem 0;
+    }
+
+    @include media(screen, quarto) {
+        padding: 4rem 0;
+    }
+
+    p {
+        margin: 0;
+    }
+}

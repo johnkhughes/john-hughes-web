@@ -1,7 +1,11 @@
 {% include header.html %}
 
-<h1>{{ page.title | markdownify | strip_html | strip_newlines }}</h1>
+<div class="content">
+    <div class="wrap">
+        <h1>{{ page.title | markdownify | strip_html | strip_newlines }}</h1>
 
-{{ content }}
+        {{ content }}
+    </div>
+</div>
 
 {% include footer.html %}

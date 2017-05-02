@@ -1,0 +1,17 @@
+.footer {
+    color: $text_color_alt;
+    font-size: 0.875rem;
+    margin: 2rem 0;
+
+    @include media(all, octavo) {
+        margin: 3rem 0;
+    }
+
+    @include media(all, quarto) {
+        margin: 4rem 0;
+    }
+
+    p {
+        margin: 0.5em 0;
+    }
+}
