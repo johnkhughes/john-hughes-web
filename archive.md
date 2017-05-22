@@ -1,4 +1,4 @@
 ---
 title: Archive
-layout: page-archive
+layout: archive
 ---

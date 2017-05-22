@@ -1,12 +1,47 @@
-{% capture title %}Archive | {{ site.title }}{% endcapture %}{% include header.html title = title %}
+{% include header.html %}
 
 <div class="content">
     <div class="wrap">
-        <h1>Archive</h1>
+        <h1>{{ page.title | smartify }}</h1>
 
         {{ content }}
 
-        {% include archive.html %}
+        <div class="section">
+            <h2>Categories</h2>
+
+            <ul class="archive-list compact">
+            {% assign categories = site.categories | sort %}
+            {% for category in categories %}
+                <li><a href="/category/{{ category | first | slugify }}">{{ category | first }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Tags</h2>
+
+            <ul class="archive-list compact">
+            {% assign tags = site.tags | sort %}
+            {% for tag in tags %}
+                <li><a href="/tag/{{ tag | first | slugify }}">{{ tag | first }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>All posts</h2>
+
+            {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+            {% for year in years %}
+            <h3>{{ year.name }}</h3>
+
+            <ol class="archive-list">
+                {% for post in year.items %}
+                <li><a href="{{ post.url }}">{{ post.title | smartify }}</a> <span class="meta">&middot; <time datetime="{{ post.date | date: "%F" }}">{{ post.date | date: "%-d %b %Y" }}</time></span></li>
+                {% endfor %}
+            </ol>
+            {% endfor %}
+        </div>
     </div>
 </div>
 
