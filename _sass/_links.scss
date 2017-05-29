@@ -1,24 +1,21 @@
 // Links
 
 a {
-    color: $purple;
+    color: $blue;
 
     &:focus {
-        outline: 2px solid $purple;
-        outline-offset: 0.25rem;
+        outline: 2px solid $blue;
+        outline-offset: 0.125rem;
     }
 
     // Links in headings, meta, and footer
     h1 &,
-    h2 &,
-    .nav &,
-    .meta &,
-    .footer & {
+    h2 & {
         color: inherit;
         text-decoration: none;
 
         &:hover {
-            color: $purple;
+            color: $blue;
         }
     }
 }

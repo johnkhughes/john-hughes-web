@@ -10,8 +10,9 @@
     }
 
     .caption {
+        @include font-size(-1);
+
         color: $text_color_alt;
-        font-size: 0.875em;
         margin: 0.75rem 0;
         text-align: center;
     }

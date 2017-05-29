@@ -1,11 +1,7 @@
 {% include header.html %}
 
-<div class="content">
-    <div class="wrap">
-        <h1>{{ page.title | smartify }}</h1>
+<h1>{{ page.title | smartify }}</h1>
 
-        {{ content }}
-    </div>
-</div>
+{{ content }}
 
 {% include footer.html %}

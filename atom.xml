@@ -23,7 +23,7 @@ layout:
         <author>
             <name>{{ site.title }}</name>
         </author>
-        <summary>{{ post.excerpt | smartify }}</summary>
+        <summary>{{ post.excerpt | markdownify | strip_html | strip_newlines }}</summary>
         <content type="html">{{ post.content | xml_escape }}</content>
     </entry>
 {% endfor %}

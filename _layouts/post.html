@@ -1,13 +1,9 @@
 {% include header.html %}
 
-<div class="content">
-    <div class="wrap">
-        <h1>{{ page.title | smartify }}</h1>
+<h1>{{ page.title | smartify }}</h1>
 
-        {{ content }}
+{{ content }}
 
-        {% include meta.html post = page %}
-    </div>
-</div>
+{% include meta.html post = page %}
 
 {% include footer.html %}

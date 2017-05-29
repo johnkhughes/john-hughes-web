@@ -1,27 +1,15 @@
 {% capture title %}{{ site.title }} | {{ site.description }}{% endcapture %}{% include header.html title = title %}
 
-<div class="banner">
-    <div class="wrap">
-        {{ content }}
-    </div>
+{% for post in site.posts limit: 20 %}
+<div class="post" role="article">
+    <h2><a href="{{ post.url }}">{{ post.title | smartify }}</a></h2>
+
+    <p>{{ post.excerpt | markdownify | strip_html | strip_newlines }}{% capture url %}{{ post.content | extract_url }}{% endcapture %}{% if post.format == "link" and url %} <a href="{{ url }}" class="more">[Visit link]</a>{% endif %}</p>
+
+    {% include meta.html %}
 </div>
+{% endfor %}
 
-<div class="content">
-    <div class="wrap">
-        {% for post in site.posts limit: 20 %}
-        <div class="post" role="article">
-            <h2><a href="{{ post.url }}">{{ post.title | smartify }}</a></h2>
-
-            <p>{{ post.excerpt | smartify }}</p>
-
-            {% capture url %}{{ post.content | extract_url }}{% endcapture %}{% if post.format == "link" and url %}<p class="more"><a href="{{ url }}" class="button alt compact">Visit link</a></p>{% endif %}
-
-            {% include meta.html %}
-        </div>
-        {% endfor %}
-
-        <p class="archive-link"><a href="/archive/" class="button">Archive</a></p>
-    </div>
-</div>
+<p class="archive-link"><a href="/archive/" class="button">Archive</a></p>
 
 {% include footer.html %}
