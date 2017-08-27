@@ -1,7 +1,6 @@
 .banner {
-    background: $green;
-    background: linear-gradient(120deg, $blue, $green);
-    color: white;
+    @include gradient;
+
     padding: 2rem 0;
     text-align: center;
 

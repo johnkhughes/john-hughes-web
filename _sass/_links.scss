@@ -4,7 +4,7 @@ a {
     color: $blue;
 
     &:focus {
-        outline: 2px solid $blue;
+        outline: 2px solid;
         outline-offset: 0.125rem;
     }
 

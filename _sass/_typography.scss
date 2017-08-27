@@ -1,5 +1,18 @@
 // Typography
 
+body {
+    @include prefix(text-size-adjust, none);
+
+    font-family: "helvetica neue", "roboto", "helvetica", "arial", sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+
+    @include media(screen) {
+        color: $text_color;
+    }
+}
+
 h1,
 h2,
 h3,

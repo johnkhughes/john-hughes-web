@@ -1,5 +1,6 @@
 .header {
-    border-bottom: 1px solid $line_color;
+    @include gradient;
+
     padding: 1rem 0;
     text-align: center;
 
@@ -8,7 +9,7 @@
     }
 
     .wrap {
-        max-width: 60rem;
+        max-width: 67.5rem;
     }
 
     a {
@@ -16,7 +17,7 @@
         text-decoration: none;
 
         &:hover {
-            color: $blue;
+            color: inherit;
         }
     }
 
@@ -35,7 +36,6 @@
     .nav {
         @include font-size(-1);
 
-        color: $text_color_alt;
         margin-top: 0.25rem;
 
         @include media(all, octavo) {
