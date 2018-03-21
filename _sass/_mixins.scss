@@ -60,13 +60,6 @@
     }
 }
 
-// Linear gradient background
-@mixin gradient {
-    background: $green;
-    background: linear-gradient(120deg, $blue, $green);
-    color: white;
-}
-
 // Prefixes
 @mixin prefix($property, $value) {
     -webkit-#{$property}: #{$value};

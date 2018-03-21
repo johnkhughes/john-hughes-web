@@ -1,22 +1,24 @@
 // Figures
 
+figure,
 .figure {
-    margin: 1em 0;
+    margin: 2em 0;
 
     img {
-        border: 1px solid $line_color;
         display: block;
         margin: 0 auto;
     }
 
+    figcaption,
     .caption {
         @include font-size(-1);
 
         color: $text_color_alt;
-        margin: 0.75rem 0;
+        margin: 1rem 0;
         text-align: center;
     }
 
+    blockquote + figcaption,
     blockquote + .caption {
         text-align: right;
     }

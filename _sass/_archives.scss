@@ -1,31 +1,8 @@
-.archive-link {
-    margin: 2rem 0;
-
-    @include media(all, octavo) {
-        margin: 3rem 0;
-    }
-
-    @include media(all, quarto) {
-        margin: 4rem 0;
-    }
-
-    @include media(print) {
-        display: none;
-    }
-}
-
-.archive-list {
+.archive {
     padding: 0;
-
-    &.compact {
-        > li {
-            display: inline;
-            margin-right: 0.75em;
-            white-space: nowrap;
-        }
-    }
 
     > li {
         display: block;
+        margin: 0.25em 0;
     }
 }

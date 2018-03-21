@@ -1,12 +1,14 @@
 {% capture title %}{{ site.title }} | {{ site.description }}{% endcapture %}{% include header.html title = title %}
 
+<h1>Latest posts</h1>
+
 {% for post in site.posts limit: 20 %}
 <div class="post" role="article">
     <h2><a href="{{ post.url }}">{{ post.title | smartify }}</a></h2>
 
-    <p>{{ post.excerpt | markdownify | strip_html | strip_newlines }}{% capture url %}{{ post.content | extract_url }}{% endcapture %}{% if post.format == "link" and url %} <a href="{{ url }}" class="more">[Visit link]</a>{% endif %}</p>
+    <p>{{ post.excerpt | markdownify | strip_html | strip_newlines }}</p>
 
-    {% include meta.html %}
+    <p class="meta"><time datetime="{{ post.date | date: "%F" }}">{{ post.date | date: "%-d %b %Y" }}</time></p>
 </div>
 {% endfor %}
 

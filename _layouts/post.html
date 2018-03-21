@@ -4,6 +4,6 @@
 
 {{ content }}
 
-{% include meta.html post = page %}
+<p class="meta"><time datetime="{{ page.date | date: "%F" }}">{{ page.date | date: "%-d %b %Y" }}</time></p>
 
 {% include footer.html %}

@@ -10,10 +10,6 @@ Before I stumbled into a career in web development, I was a plant scientist and 
 
 If you have a question or comment about the site, please [get in touch][6]. You can also find me on [GitHub][7] and [Twitter][8].
 
-## Colophon
-
-This website is powered by [Jekyll][9]. The [site's source code][10] is available on GitHub. The design is based on the [Cayman theme][11] by Jason Long, but the HTML and CSS are my own work. The [site icon][12] is from [Font Awesome][13].
-
 [1]: http://www.castlegateit.co.uk/
 [2]: http://www.cell.com/trends/plant-science/abstract/S1360-1385%2808%2900225-2
 [3]: http://onlinelibrary.wiley.com/doi/10.1111/j.1469-8137.2008.02727.x/full
@@ -22,8 +18,3 @@ This website is powered by [Jekyll][9]. The [site's source code][10] is availabl
 [6]: /contact/
 [7]: https://github.com/johnkhughes
 [8]: https://twitter.com/johnkhughes
-[9]: http://jekyllrb.com/
-[10]: https://github.com/johnkhughes/johnhughesweb.co.uk
-[11]: https://jasonlong.github.io/cayman-theme/
-[12]: /static/images/icon.svg
-[13]: http://fontawesome.io/

@@ -10,6 +10,9 @@ body {
 
     @include media(screen) {
         color: $text_color;
+        margin: 0 auto;
+        max-width: 45rem;
+        padding: 0 1rem;
     }
 }
 
@@ -24,6 +27,12 @@ h6 {
     line-height: 1.25;
     margin: 1em 0 0 0;
     page-break-after: avoid;
+}
+
+h1,
+h2,
+h3 {
+    letter-spacing: -0.025em;
 }
 
 h1 {
@@ -59,21 +68,11 @@ blockquote {
 
 p {
     margin: 1em 0;
-
-    // Paragraphs preceded by subheadings
-    // h2 + &,
-    // h3 + &,
-    // h4 + &,
-    // h5 + &,
-    // h6 + & {
-    //     margin-top: 0.5em;
-    // }
 }
 
 pre {
     background: tint($text_color, 97.5%);
     border-radius: 0.25rem;
-    border: 1px solid $line_color;
     margin: 1rem 0;
     overflow-wrap: break-word;
     overflow: auto;

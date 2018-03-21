@@ -2,13 +2,4 @@
     @include font-size(-1);
 
     color: $text_color_alt;
-
-    a {
-        color: inherit;
-        text-decoration: none;
-
-        &:hover {
-            color: $blue;
-        }
-    }
 }

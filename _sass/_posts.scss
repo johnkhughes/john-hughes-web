@@ -1,9 +1,7 @@
 .post {
-    @extend .section;
+    margin: 2rem 0;
 
-    .more {
-        text-decoration: none;
-        text-transform: lowercase;
-        white-space: nowrap;
+    @include media(all, octavo) {
+        margin: 3rem 0;
     }
 }

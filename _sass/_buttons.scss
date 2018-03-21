@@ -1,20 +1,19 @@
 .button {
-    background: transparent;
-    border: 1px solid $blue;
+    background: $green;
     border-radius: 0.25rem;
-    color: $blue;
+    color: white;
     display: inline-block;
     padding: 0.75em 1.5em;
     text-decoration: none;
-    transition: background-color 200ms, border-color 200ms, color 200ms;
+    transition: background-color 200ms;
 
     &:hover {
-        background: $blue;
+        background: tint($green, 10%);
         color: white;
     }
 
     &:active {
-        background: shade($blue, 10%);
-        border-color: shade($blue, 10%);
+        background: shade($green, 10%);
+        border-color: shade($green, 10%);
     }
 }

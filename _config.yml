@@ -9,10 +9,6 @@ github: johnkhughes
 # Build settings
 permalink: /:year/:month/:title/
 
-exclude:
-  - LICENSE
-  - README.md
-
 defaults:
   - scope:
       path: ""
@@ -24,26 +20,3 @@ defaults:
       type: "pages"
     values:
       layout: "page"
-
-markdown: kramdown
-
-kramdown:
-  auto_ids: false
-  entity_output: as_char
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-
-# Archive settings
-gems:
-  - jekyll-archives
-
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-    - year
-    - month
-  layouts:
-    category: category
-    tag: tag
-    year: year
-    month: month
