@@ -3,7 +3,7 @@
 body {
     @include prefix(text-size-adjust, none);
 
-    font-family: "helvetica neue", "roboto", "helvetica", "arial", sans-serif;
+    font-family: sans-serif;
     line-height: 1.5;
     margin: 0;
     padding: 0;
@@ -101,7 +101,7 @@ pre,
 samp {
     @include font-size(-1);
 
-    font-family: "menlo", "roboto mono", "consolas", "dejavu sans mono", monospace, monospace;
+    font-family: monospace, monospace;
 
     // Maintain font size when mono elements are nested
     pre & {
