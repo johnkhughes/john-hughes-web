@@ -1,5 +1,5 @@
 .button {
-    background: $green;
+    background: $link_color;
     border-radius: 0.25rem;
     color: white;
     display: inline-block;
@@ -8,12 +8,11 @@
     transition: background-color 200ms;
 
     &:hover {
-        background: tint($green, 10%);
+        background: tint($link_color, 10%);
         color: white;
     }
 
     &:active {
-        background: shade($green, 10%);
-        border-color: shade($green, 10%);
+        background: shade($link_color, 10%);
     }
 }

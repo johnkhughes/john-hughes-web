@@ -1,7 +1,7 @@
 // Links
 
 a {
-    color: $green;
+    color: $link_color;
 
     &:focus {
         outline: 2px solid;
@@ -17,7 +17,7 @@ a {
         transition: color 200ms;
 
         &:hover {
-            color: $green;
+            color: $link_color;
         }
     }
 
