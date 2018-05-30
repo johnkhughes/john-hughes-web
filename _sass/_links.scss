@@ -21,6 +21,11 @@ a {
         }
     }
 
+    h1 &,
+    h2 & {
+        display: inline-block;
+    }
+
     // Links in navigation
     .nav & {
         text-decoration: none;
