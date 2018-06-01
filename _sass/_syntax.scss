@@ -1,6 +1,20 @@
 // Syntax highlighter
+//
+// rougify help style
+// rougify style <style>
 
 .highlight {
+    $grey: $text_color_alt;
+    $highlight: tint($text_color, 97.5%);
+
+    $blue: #4271ae;
+    $teal: #348187;
+    $green: #556a00;
+    $yellow: #8e6f00;
+    $orange: #ae5808;
+    $red: #c82829;
+    $purple: #8959a8;
+
     .ge {
         font-style: italic;
     }
@@ -22,13 +36,13 @@
     .o,
     .ow,
     .gu {
-        color: #348187;
+        color: $teal;
     }
 
     .na,
     .nf,
     .nx {
-        color: #4271ae;
+        color: $blue;
     }
 
     .gi,
@@ -41,7 +55,7 @@
     .sr,
     .ss,
     .sx {
-        color: #556a00;
+        color: $green;
     }
 
     .k,
@@ -49,7 +63,7 @@
     .kd,
     .kp,
     .kr {
-        color: #8959a8;
+        color: $purple;
     }
 
     .c,
@@ -59,7 +73,7 @@
     .cs,
     .sd,
     .gp {
-        color: #696969;
+        color: $grey;
     }
 
     .err,
@@ -70,13 +84,13 @@
     .vc,
     .vg,
     .vi {
-        color: #c82829;
+        color: $red;
     }
 
     .kt,
     .nc,
     .nn {
-        color: #8e6f00;
+        color: $yellow;
     }
 
     .il,
@@ -88,6 +102,6 @@
     .mo,
     .se,
     .si {
-        color: #ae5808;
+        color: $orange;
     }
 }
