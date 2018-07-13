@@ -48,14 +48,17 @@ h4 {
 }
 
 hr {
-    border-color: $line_color;
-    border-style: solid;
-    border-width: 1px 0 0 0;
+    border: {
+        color: $text_color;
+        style: solid;
+        width: 2px 0 0 0;
+    }
+
     margin: 2em 0;
 }
 
 blockquote {
-    border-left: 1px solid $line_color;
+    border-left: 2px solid $text_color;
     margin: 1em;
     padding: 0 1em;
 }
