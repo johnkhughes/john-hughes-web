@@ -68,9 +68,8 @@ p {
 }
 
 pre {
-    background: tint($text_color, 97.5%);
-    border-left: 2px solid tint($text_color, 90%);
-    margin: 1em 0;
+    border: 2px dashed tint($text_color, 75%);
+    margin: 1.5em 0;
     overflow-wrap: break-word;
     overflow: auto;
     padding: 1em;
