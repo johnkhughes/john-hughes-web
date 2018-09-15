@@ -4,8 +4,8 @@
 @mixin media($type: all, $size: false) {
     $query: $type;
     $sizes: (
-        octavo: "(min-width: 30rem) and (min-height: 20rem)",
-        quarto: "(min-width: 40rem) and (min-height: 30rem)",
+        octavo: "(min-width: 480px) and (min-height: 320px)",
+        quarto: "(min-width: 640px) and (min-height: 480px)",
     );
 
     @if $size and map-has-key($sizes, $size) {

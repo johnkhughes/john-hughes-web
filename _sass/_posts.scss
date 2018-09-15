@@ -1,7 +1,7 @@
 .post {
-    margin: 2rem 0;
+    margin: 2em 0;
 
     @include media(all, octavo) {
-        margin: 3rem 0;
+        margin: 3em 0;
     }
 }
