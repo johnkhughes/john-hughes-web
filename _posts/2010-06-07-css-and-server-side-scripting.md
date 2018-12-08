@@ -21,14 +21,12 @@ Firstly, change the extension of your stylesheet to the extension of your script
 Next, make sure that the stylesheet file identifies itself as a CSS file. In PHP, this is done using:
 
 ~~~~~~~~ php
-<?php header('Content-Type: text/css; charset=utf-8'); ?>
+header('Content-Type: text/css; charset=utf-8'); ?>
 ~~~~~~~~
 
 Now you have all the programming features of PHP at your disposal. You can use it to store colour values in variables to make it easy to insert the same ones throughout the file:
 
 ~~~~~~~~ php
-<?php
-
 $bg = '#fff';
 $fg = '#c00';
 
