@@ -1,7 +1,6 @@
 // Figures
 
-figure,
-.figure {
+figure {
     margin: 2em 0;
 
     img {
@@ -9,8 +8,7 @@ figure,
         margin: 0 auto;
     }
 
-    figcaption,
-    .caption {
+    figcaption {
         @include font-size(-1);
 
         color: $text_color_alt;
@@ -18,8 +16,7 @@ figure,
         text-align: center;
     }
 
-    blockquote + figcaption,
-    blockquote + .caption {
+    blockquote + figcaption {
         text-align: right;
     }
 }

@@ -1,4 +1,4 @@
-.header {
+header {
     margin: 2em 0;
 
     @include media(all, octavo) {
@@ -14,7 +14,7 @@
         }
     }
 
-    .nav {
+    nav {
         margin: 0.5em 0;
 
         ul {

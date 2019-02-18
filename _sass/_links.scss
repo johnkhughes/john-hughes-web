@@ -11,7 +11,7 @@ a {
     // Links in headings, footer
     h1 &,
     h2 &,
-    .footer & {
+    footer & {
         color: inherit;
         text-decoration: none;
         transition: color 200ms;
@@ -27,7 +27,7 @@ a {
     }
 
     // Links in navigation
-    .nav & {
+    nav & {
         text-decoration: none;
     }
 }
