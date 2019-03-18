@@ -8,9 +8,9 @@
 {% for year in years %}
 <h2>{{ year.name }}</h2>
 
-<ol class="archive">
+<ol class="archive-list">
     {% for post in year.items %}
-    <li><a href="{{ post.url }}">{{ post.title | smartify }}</a> <span class="meta">&mdash; <time datetime="{{ post.date | date: "%F" }}">{{ post.date | date: "%-d %b %Y" }}</time></span></li>
+    <li><a href="{{ post.url }}">{{ post.title | smartify }}</a> <span class="meta">&mdash; <time datetime="{{ post.date | date: '%F' }}">{{ post.date | date: '%-d %b %Y' }}</time></span></li>
     {% endfor %}
 </ol>
 {% endfor %}

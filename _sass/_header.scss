@@ -1,11 +1,11 @@
-header {
+.site-header {
     margin: 2em 0;
 
     @include media(all, octavo) {
         margin: 3em 0;
     }
 
-    h1 {
+    .title {
         @include font-size(1);
 
         .description {
@@ -14,7 +14,7 @@ header {
         }
     }
 
-    nav {
+    .nav {
         margin: 0.5em 0;
 
         ul {
@@ -25,6 +25,10 @@ header {
         li {
             display: inline;
             margin-right: 0.5em;
+        }
+
+        a {
+            text-decoration: none;
         }
     }
 }

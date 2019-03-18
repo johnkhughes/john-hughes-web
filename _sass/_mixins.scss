@@ -67,3 +67,14 @@
     -ms-#{$property}: #{$value};
     #{$property}: #{$value};
 }
+
+// Subtle links
+@mixin subtle-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 200ms;
+
+    &:hover {
+        color: $link_color;
+    }
+}

@@ -2,4 +2,8 @@
     @include font-size(-1);
 
     color: $text_color_alt;
+
+    a {
+        @include subtle-link;
+    }
 }
