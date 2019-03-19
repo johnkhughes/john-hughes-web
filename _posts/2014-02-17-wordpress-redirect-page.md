@@ -9,6 +9,8 @@ excerpt: Sometimes a page isn’t really a page, it is a container for other pag
 Sometimes a page isn’t really a page, it is a container for other pages. In WordPress, this would be a parent page with one or more child pages. The problem is that the empty parent page still exists and can viewed on the site. A simple solution to this is to create a template that redirects to the first child page:
 
 ~~~~~~~~ php
+<?php
+
 /*
 Template Name: Redirect Page
 */

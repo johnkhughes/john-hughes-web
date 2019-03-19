@@ -11,12 +11,16 @@ The last time I updated my site, I decided I wanted to display full posts on the
 Essentially, I needed a way of dynamically promoting or demoting headings in an arbitrary fragment of HTML. So I wrote a [PHP class](https://github.com/johnkhughes/normalize-headings) to do just that. It is very easy to use. You can specify the content and the highest permitted headings level when you create the object. In this example, headings cannot be higher than `<h3>`.
 
 ~~~~~~~~ php
+<?php
+
 $content = new Normalize_Headings($html, 3);
 ~~~~~~~~
 
 You can also set the content and heading level manually.
 
 ~~~~~~~~ php
+<?php
+
 $content->set_content($html);
 $content->set_level(3);
 ~~~~~~~~
@@ -24,18 +28,24 @@ $content->set_level(3);
 The `get_content()` method returns the HTML content with the top level headings converted to `<h3>` and any subheadings promoted or demoted accordingly.
 
 ~~~~~~~~ php
+<?php
+
 $content->get_content();
 ~~~~~~~~
 
 If you need the original HTML, you can return that at any time too.
 
 ~~~~~~~~ php
+<?php
+
 $content->get_original_content();
 ~~~~~~~~
 
 It is also easy to set it up as a WordPress filter, in this case making subheadings `<h2>` on single posts and pages and `<h3>` everywhere else.
 
 ~~~~~~~~ php
+<?php
+
 function normalize_headings_filter($html) {
     $content = new Normalize_Headings($html, 3);
     if (is_page() || is_single()) {
