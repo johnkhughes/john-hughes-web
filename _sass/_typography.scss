@@ -68,11 +68,11 @@ p {
 }
 
 pre {
-    border: 2px dashed tint($text_color, 75%);
+    border: 2px dashed tint($text_color, 85%);
     margin: 1.5em 0;
     overflow-wrap: break-word;
     overflow: auto;
-    padding: 1em;
+    padding: 1.5em;
     white-space: pre-wrap;
     word-wrap: break-word;
 }

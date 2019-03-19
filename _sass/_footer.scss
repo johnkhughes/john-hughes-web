@@ -1,4 +1,4 @@
-footer {
+.site-footer {
     @include font-size(-1);
 
     color: $text_color_alt;
@@ -10,5 +10,9 @@ footer {
 
     p {
         margin: 0.5em 0;
+    }
+
+    a {
+        @include subtle-link;
     }
 }

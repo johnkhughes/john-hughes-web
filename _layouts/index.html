@@ -3,15 +3,17 @@
 <h1>Latest posts</h1>
 
 {% for post in site.posts limit: 20 %}
-<article>
+<article class="post">
     <h2><a href="{{ post.url }}">{{ post.title | smartify }}</a></h2>
 
     <p>{{ post.excerpt | markdownify | strip_html | strip_newlines }}</p>
 
-    <p class="meta"><time datetime="{{ post.date | date: "%F" }}">{{ post.date | date: "%-d %b %Y" }}</time></p>
+    <p class="meta"><time datetime="{{ post.date | date: '%F' }}">{{ post.date | date: "%-d %b %Y" }}</time></p>
 </article>
 {% endfor %}
 
-<p><a href="/archive/" class="button">Archive</a></p>
+<div class="archive-link">
+    <p><a href="/archive/" class="button">Archive</a></p>
+</div>
 
 {% include footer.html %}
