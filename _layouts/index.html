@@ -1,4 +1,8 @@
-{% capture title %}{{ site.title }} | {{ site.description }}{% endcapture %}{% include header.html title = title %}
+{%- capture title -%}
+    {{ site.title }} | {{ site.description }}
+{%- endcapture -%}
+
+{% include header.html title = title %}
 
 <h1>Latest posts</h1>
 

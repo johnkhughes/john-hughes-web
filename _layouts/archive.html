@@ -4,7 +4,8 @@
 
 {{ content }}
 
-{% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{%- assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" -%}
+
 {% for year in years %}
 <h2>{{ year.name }}</h2>
 

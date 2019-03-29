@@ -1,14 +1,23 @@
 ---
 layout: null
 ---
+
+{%- capture site_url -%}
+    {% link index.md %}
+{%- endcapture -%}
+
+{%- capture atom_url -%}
+    {% link atom.xml %}
+{%- endcapture -%}
+
 <?xml version="1.0" encoding="utf-8"?>
 
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>{{ site.title | smartify }}</title>
-    <link href="{{ site.url }}/" />
-    <link href="{% link atom.xml %}" rel="self" />
+    <link href="{{ site_url | absolute_url }}" />
+    <link href="{{ atom_url | absolute_url }}" rel="self" />
     <updated>{{ site.time | date_to_xmlschema }}</updated>
-    <id>{{ site.url }}/</id>
+    <id>{{ site_url | absolute_url }}</id>
     <author>
         <name>{{ site.author }}</name>
     </author>
@@ -16,8 +25,8 @@ layout: null
 {% for post in site.posts limit: 20 %}
     <entry>
         <title>{{ post.title | smartify }}</title>
-        <link href="{{ site.url }}{{ post.url }}" />
-        <id>{{ site.url }}{{ post.url }}</id>
+        <link href="{{ post.url | absolute_url }}" />
+        <id>{{ post.url | absolute_url }}</id>
         <published>{{ post.date | date_to_xmlschema }}</published>
         <updated>{{ post.date | date_to_xmlschema }}</updated>
         <author>
