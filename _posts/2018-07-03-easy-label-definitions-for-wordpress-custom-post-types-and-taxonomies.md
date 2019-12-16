@@ -6,8 +6,6 @@ excerpt: When you define a new custom post type or taxonomy in WordPress, you ne
 When you define a new custom post type or taxonomy in WordPress, you need to set labels for all the different buttons and links in the interface. This is usually a tedious process of writing each label individually:
 
 ~~~ php
-<?php
-
 register_post_type('book', [
     'labels' => [
         'name' => 'Books',
@@ -22,8 +20,6 @@ register_post_type('book', [
 So here is a function that generate all the necessary labels, based on the singular and plural names of the post type or taxonomy:
 
 ~~~ php
-<?php
-
 function post_type_labels($single, $plural = null)
 {
     if (is_null($plural)) {
@@ -63,8 +59,6 @@ function post_type_labels($single, $plural = null)
 You can omit the plural version of the name and the function will create a plural form by appending an "s" to the singular form of the name. Now you can define post type and taxonomy labels with a single line:
 
 ~~~ php
-<?php
-
 register_post_type('book', [
     'labels' => post_type_labels('Book'),
     // ...

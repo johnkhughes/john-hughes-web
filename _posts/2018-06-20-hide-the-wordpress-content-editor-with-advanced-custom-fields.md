@@ -8,8 +8,6 @@ If you use [Advanced Custom Fields](https://www.advancedcustomfields.com/) for W
 To solve this problem, I have begun to define a separate field group with the sole purpose of hiding the main content and then placing it above all the other field groups:
 
 ~~~ php
-<?php
-
 acf_add_local_field_group([
     'location' => [
         [

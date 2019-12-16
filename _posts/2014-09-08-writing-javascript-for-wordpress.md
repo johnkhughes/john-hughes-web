@@ -11,8 +11,6 @@ When you are writing JavaScript for a WordPress site, it is tempting to shove `<
 Thankfully, WordPress has a simple way of adding scripts, including their dependencies, without loading the same thing twice and keeping everything in the right order. The trick to is use `wp_enqueue_script()`:
 
 ~~~~~~~~ php
-<?php
-
 function my_scripts() {
     $dir = get_template_directory_uri();
     wp_enqueue_script('my-script', "$dir/my-script.js", array('jquery'));

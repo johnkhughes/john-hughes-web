@@ -9,8 +9,6 @@ excerpt: A data URI can be used to embed files directly in HTML or CSS as base64
 A [data URI](https://developer.mozilla.org/en-US/docs/Web/HTTP/data_URIs) can be used to embed files, such as images, directly in HTML or CSS as base64 encoded strings. PHP provides a useful `base64_encode()` function, but to complete the data URI, you need to include the scheme, media type, and encoding. Here is a simple function to make it easier:
 
 ~~~~~~~~ php
-<?php
-
 function data_uri($file, $type) {
     $contents = file_get_contents($file);
     $base64 = base64_encode($contents);

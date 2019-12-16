@@ -14,8 +14,6 @@ It is so simple that you don't really need a class; a short function or method i
 My original version was written in PHP, so let's start with that.
 
 ~~~~ php
-<?php
-
 function normalize($html, $limit = 2) {
     $levels = range(1, 6);
     $diff = 0;

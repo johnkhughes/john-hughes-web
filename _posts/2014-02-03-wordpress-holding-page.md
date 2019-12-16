@@ -9,8 +9,6 @@ excerpt: If you are developing a new WordPress site on a live server, you might 
 If you are developing a WordPress site on a live server, you might want to display a holding page to anyone who isn’t working on the site. You can do this very easily by using a few lines of PHP to check whether the current user is logged in.
 
 ~~~~~~~~ php
-<?php
-
 if (!is_user_logged_in()) {
     exit('Holding Page');
 }

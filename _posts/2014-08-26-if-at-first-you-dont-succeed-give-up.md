@@ -11,8 +11,6 @@ My teacher once said, "If at first you don't succeed, give up. You clearly aren'
 I recently wrote a script to log in to a remote server. If the first attempt failed, perhaps because the server was busy, it would try again. The PHP looked something like this, where `get_token()` returns `FALSE` if the login fails:
 
 ~~~~~~~~ php
-<?php
-
 function connect($url) {
     $token = get_token($url);
     if (!$token) {
@@ -25,8 +23,6 @@ function connect($url) {
 So far so good, but what if there is a bigger problem with the remote server and you cannot log in at all? I had created an infinite loop. The fix is easy: if you don't succeed in a few attempts, give up. Here is a simplified version of the PHP:
 
 ~~~~~~~~ php
-<?php
-
 $attempt = 0;
 
 function connect($url) {
