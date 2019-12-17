@@ -1,0 +1,21 @@
+.button {
+    @include transition-colors;
+
+    background: $button-background-color;
+    border-radius: $button-border-radius;
+    border: 0;
+    color: $button-color;
+    display: inline-block;
+    padding: 0.75em 1.25em;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $button-hover-background-color;
+        color: $button-hover-color;
+    }
+
+    &:active {
+        background-color: $button-active-background-color;
+        color: $button-active-color;
+    }
+}

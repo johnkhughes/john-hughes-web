@@ -1,42 +1,40 @@
 <!DOCTYPE html>
-
 <html lang="en">
+    <head>
+        <title>
+            {%- if include.title -%}
+                {{ include.title }}
+            {%- else -%}
+                {{ page.title }} | {{ site.title }}
+            {%- endif -%}
+        </title>
 
-<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="{{ site.author }}">
 
-<title>
-    {%- if include.title -%}
-        {{ include.title }}
-    {%- else -%}
-        {{ page.title }} | {{ site.title }}
-    {%- endif -%}
-</title>
+        <link rel="stylesheet" href="{% link css/style.scss %}?v={{ site.time | date: '%s' }}">
+        <link rel="alternate" type="application/atom+xml" href="{% link atom.xml %}" title="{{ site.title }} | Atom Feed">
+        <link rel="canonical" href="{{ page.url | absolute_url }}">
+    </head>
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="author" content="{{ site.author }}" />
+    <body>
+        <header class="header">
+            <div class="wrap">
+                <h1 class="title">
+                    <a href="{% link index.md %}">{{ site.title }}</a>
+                    <span class="description">&mdash; {{ site.description }}</span>
+                </h1>
 
-<link rel="stylesheet" href="{% link css/style.scss %}?v={{ site.time | date: '%s' }}" />
-<link rel="alternate" type="application/atom+xml" href="{% link atom.xml %}" title="{{ site.title }} | Atom Feed" />
-<link rel="canonical" href="{{ page.url | absolute_url }}" />
+                <nav class="nav">
+                    <ul>
+                        <li><a href="{% link about.md %}">About</a></li>
+                        <li><a href="{% link archive.md %}">Archive</a></li>
+                        <li><a href="{% link contact.md %}">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-</head>
-
-<body>
-
-<header class="site-header">
-    <h1 class="title">
-        <a href="{% link index.md %}">{{ site.title }}</a>
-        <span class="description">&mdash; {{ site.description }}</span>
-    </h1>
-
-    <nav class="nav">
-        <ul>
-            <li><a href="{% link about.md %}">About</a></li>
-            <li><a href="{% link archive.md %}">Archive</a></li>
-            <li><a href="{% link contact.md %}">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
-<main class="site-main">
+        <main class="main">
+            <div class="wrap">

@@ -1,0 +1,14 @@
+.post {
+    margin: 2em 0;
+
+    @include media(all, octavo) {
+        margin: 3em 0;
+    }
+
+    > h1:first-child > a,
+    > h2:first-child > a {
+        @include quiet-link;
+
+        display: inline-block;
+    }
+}

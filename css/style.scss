@@ -3,18 +3,25 @@ layout: null
 ---
 
 @import 'functions';
+@import 'variables';
 @import 'mixins';
-@import 'colors';
 
-@import 'typography';
-@import 'links';
-@import 'figures';
-@import 'buttons';
+@import 'base/base';
+@import 'base/code';
+@import 'base/figures';
+@import 'base/images';
+@import 'base/links';
+@import 'base/tables';
 
-@import 'header';
-@import 'main';
-@import 'footer';
-@import 'posts';
-@import 'meta';
-@import 'archives';
-@import 'syntax';
+@import 'components/archive';
+@import 'components/button';
+@import 'components/footer';
+@import 'components/header';
+@import 'components/highlight';
+@import 'components/main';
+@import 'components/meta';
+@import 'components/more';
+@import 'components/nav';
+@import 'components/post';
+@import 'components/title';
+@import 'components/wrap';

@@ -1,0 +1,31 @@
+// Variables
+
+// Colors
+$black: #000;
+$white: #fff;
+
+$dark-grey: tint($black, 10%);
+$medium-grey: tint($black, 30%);
+
+$purple: #639;
+
+$body-color: $dark-grey;
+$body-color-alt: $medium-grey;
+$body-background-color: $white;
+
+$link-color: $purple;
+
+// Borders
+$border-color: null;
+$border-width: 2px;
+
+// Buttons
+$button-border-radius: 4px;
+$button-color: $white;
+$button-background-color: $purple;
+
+$button-hover-color: $button-color;
+$button-hover-background-color: tint($purple, 10%);
+
+$button-active-color: $button-color;
+$button-active-background-color: shade($purple, 10%);

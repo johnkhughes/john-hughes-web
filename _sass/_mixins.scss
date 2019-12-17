@@ -60,21 +60,20 @@
     }
 }
 
-// Prefixes
-@mixin prefix($property, $value) {
-    -webkit-#{$property}: #{$value};
-    -moz-#{$property}: #{$value};
-    -ms-#{$property}: #{$value};
-    #{$property}: #{$value};
+// Transitions
+@mixin transition-colors {
+    transition-duration: 200ms;
+    transition-property: background-color, border-color, color, opacity;
 }
 
-// Subtle links
-@mixin subtle-link {
+// Links
+@mixin quiet-link {
+    @include transition-colors;
+
     color: inherit;
     text-decoration: none;
-    transition: color 200ms;
 
     &:hover {
-        color: $link_color;
+        color: $link-color;
     }
 }
