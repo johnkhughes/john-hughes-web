@@ -1,0 +1,6 @@
+.container {
+    @include margin-x(auto);
+    @include padding-x($spacer);
+
+    max-width: $container-max-width;
+}

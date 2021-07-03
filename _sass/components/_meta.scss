@@ -1,9 +1,0 @@
-.meta {
-    @include font-size(-1);
-
-    color: $body-color-alt;
-
-    a {
-        @include quiet-link;
-    }
-}

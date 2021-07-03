@@ -1,31 +1,159 @@
-// Variables
-
-// Colors
 $black: #000;
 $white: #fff;
 
-$dark-grey: tint($black, 10%);
-$medium-grey: tint($black, 30%);
+$grey-050: #eceff1;
+$grey-100: #cfd8dc;
+$grey-200: #b0bec5;
+$grey-300: #90a4ae;
+$grey-400: #78909c;
+$grey-500: #607d8b;
+$grey-600: #546e7a;
+$grey-700: #455a64;
+$grey-800: #37474f;
+$grey-900: #263238;
 
-$purple: #639;
+$blue: #1565c0;
+$indigo: #3949ab;
+$purple: #9c27b0;
+$pink: #d81b60;
+$red: #b71c1c;
+$orange: #bf360c;
+$yellow: #795548;
+$green: #2e7d32;
+$teal: #00796b;
+$cyan: #006064;
 
-$body-color: $dark-grey;
-$body-color-alt: $medium-grey;
-$body-background-color: $white;
+$primary: $blue;
+$secondary: $grey-600;
+$light: mix($grey-050, $white);
+$dark: $grey-900;
 
-$link-color: $purple;
+$spacer: 1rem;
 
-// Borders
+$body-bg: $white;
+$body-color: $grey-900;
+
+$link-color: $primary;
+$link-decoration: underline;
+$link-hover-color: inherit;
+$link-hover-decoration: null;
+
+$paragraph-margin-top: 0;
+$paragraph-margin-bottom: 1em;
+
 $border-color: null;
 $border-width: 2px;
+$border-radius: 0.25rem;
 
-// Buttons
-$button-border-radius: 4px;
-$button-color: $white;
-$button-background-color: $purple;
+$transition-duration: 200ms;
 
-$button-hover-color: $button-color;
-$button-hover-background-color: tint($purple, 10%);
+$font-family-sans: "inter", "helvetica neue", "helvetica", "arial", sans-serif;
+$font-family-mono: "ibm plex mono", "menlo", "consolas", monospace, monospace;
+$font-family-base: $font-family-sans;
 
-$button-active-color: $button-color;
-$button-active-background-color: shade($purple, 10%);
+$font-size-root: null;
+$font-size-base: 1rem;
+$font-size-mono: 0.875em;
+
+$font-scale-lg: 1;
+$font-scale-sm: -1;
+$font-scale-xs: -2;
+
+$font-weight-normal: 400;
+$font-weight-bold: 800;
+
+$font-weight-mono-normal: 400;
+$font-weight-mono-bold: 700;
+
+$font-weight-base: $font-weight-normal;
+
+$line-height-base: 1.5;
+
+$h1-font-scale: 4;
+$h2-font-scale: 3;
+$h3-font-scale: 2;
+$h4-font-scale: 1;
+$h5-font-scale: 0;
+$h6-font-scale: 0;
+
+$headings-margin-top: 0;
+$headings-margin-bottom: 0.25em;
+$headings-color: null;
+$headings-font-family: null;
+$headings-font-weight: $font-weight-bold;
+$headings-line-height: 1.25;
+
+$breakpoints: (
+    xs: 0,
+    vs: 20 * if($font-size-root, $font-size-root, $font-size-base),
+    sm: 30 * if($font-size-root, $font-size-root, $font-size-base),
+    qs: 40 * if($font-size-root, $font-size-root, $font-size-base),
+    md: 50 * if($font-size-root, $font-size-root, $font-size-base),
+    lg: 60 * if($font-size-root, $font-size-root, $font-size-base),
+    vl: 70 * if($font-size-root, $font-size-root, $font-size-base),
+    xl: 80 * if($font-size-root, $font-size-root, $font-size-base),
+    xx: 90 * if($font-size-root, $font-size-root, $font-size-base),
+    x3: 100 * if($font-size-root, $font-size-root, $font-size-base),
+);
+
+$type-scales: (
+    xs: 1.2,
+    qs: 1.25,
+    md: 1.333,
+);
+
+$container-max-width: 50rem;
+
+$caption-margin: max($paragraph-margin-top, $paragraph-margin-bottom) / 2;
+$caption-font-family: null;
+$caption-font-scale: -1;
+$caption-font-weight: null;
+$caption-line-height: null;
+$caption-text-align: left;
+
+$table-margin-top: $paragraph-margin-top;
+$table-margin-bottom: $paragraph-margin-bottom;
+$table-border-width: $border-width;
+$table-border-color: null;
+$table-cell-padding: 0.5em;
+$table-cell-text-align: left;
+$table-cell-vertical-align: top;
+$table-heading-padding: $table-cell-padding;
+$table-heading-text-align: $table-cell-text-align;
+$table-heading-vertical-align: $table-cell-vertical-align;
+$table-heading-font-weight: $headings-font-weight;
+
+$pre-margin-top: $paragraph-margin-top / strip-unit($font-size-mono);
+$pre-margin-bottom: $paragraph-margin-bottom / strip-unit($font-size-mono);
+$pre-padding: 0;
+
+$hr-margin-top: max($paragraph-margin-top, $paragraph-margin-bottom);
+$hr-margin-bottom: max($paragraph-margin-top, $paragraph-margin-bottom);
+
+$text-indent: 2em;
+
+$dark-mode-blue: #42a5f5;
+$dark-mode-indigo: #7986cb;
+$dark-mode-purple: #ce93d8;
+$dark-mode-pink: #f06292;
+$dark-mode-red: #e57373;
+$dark-mode-orange: #ff9800;
+$dark-mode-yellow: #fdd835;
+$dark-mode-green: #66bb6a;
+$dark-mode-teal: #4db6ac;
+$dark-mode-cyan: #4dd0e1;
+
+$dark-mode-primary: $dark-mode-blue;
+$dark-mode-secondary: $grey-300;
+$dark-mode-light: mix($grey-900, $black, 75%);
+$dark-mode-dark: $grey-900;
+
+$dark-mode-body-bg: mix($grey-900, $black);
+$dark-mode-body-color: $grey-050;
+
+$dark-mode-link-color: $dark-mode-primary;
+$dark-mode-link-hover-color: inherit;
+
+$dark-mode-border-color: null;
+$dark-mode-headings-color: null;
+$dark-mode-table-border-color: null;

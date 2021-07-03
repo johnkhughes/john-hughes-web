@@ -1,0 +1,19 @@
+.nav {
+    &__list {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        display: inline;
+
+        &:not(:first-child) {
+            &::before {
+                content: "\20\b7\20";
+            }
+        }
+    }
+
+    &__link {
+    }
+}

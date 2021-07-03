@@ -1,13 +1,14 @@
-# Site settings
 title: John Hughes
 description: Web development and other interesting things
 url: https://www.johnhughesweb.co.uk
 author: John Hughes
 email: hello@johnhughesweb.co.uk
-twitter: johnkhughes
-github: johnkhughes
 
-# Build settings
+github: johnkhughes
+gitlab: jkhughes
+twitter: johnkhughes
+
+date_format: "%e %B %Y"
 permalink: /:year/:month/:title/
 
 defaults:

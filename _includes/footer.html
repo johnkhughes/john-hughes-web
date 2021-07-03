@@ -1,10 +1,8 @@
-            </div>
-        </main>
-
         <footer class="footer">
-            <div class="wrap">
+            <div class="footer__wrap">
                 <p>Copyright &copy; {{ site.author }} {{ site.posts.last.date | date: '%Y' }}&ndash;{{ site.posts.first.date | date: '%Y' }}. All rights reserved.</p>
-                <p><a href="{% link atom.xml %}">Subscribe</a> &middot; <a href="https://github.com/{{ site.github }}">GitHub</a> &middot; <a href="https://twitter.com/{{ site.twitter }}">Twitter</a></p>
+
+                <p><a href="{% link atom.xml %}">Subscribe</a>{% if site.github %} &middot; <a href="https://github.com/{{ site.github }}">GitHub</a>{% endif %}{% if site.gitlab %} &middot; <a href="https://gitlab.com/{{ site.gitlab }}">GitLab</a>{% endif %}{% if site.twitter %} &middot; <a href="https://twitter.com/{{ site.twitter }}">Twitter</a>{% endif %}</p>
             </div>
         </footer>
     </body>

@@ -1,0 +1,329 @@
+// Tomorrow-ish
+.highlight {
+    .hll {
+        background-color: $white;
+
+        @include dark-mode {
+            background-color: $black;
+        }
+    }
+
+    // Error
+    .err {
+        background: $red;
+        color: $white;
+
+        @include dark-mode {
+            background: $dark-mode-red;
+            color: $black;
+        }
+    }
+
+    // Comment
+    // Comment.Single
+    // Comment.Multiline
+    // Comment.Preproc
+    // Comment.Special
+    .c,
+    .c1,
+    .cm,
+    .cp,
+    .cs {
+        color: $secondary;
+
+        @include dark-mode {
+            color: $dark-mode-secondary;
+        }
+    }
+
+    // Generic.Heading
+    .gh {
+        color: $body-color;
+        font-weight: $font-weight-mono-bold;
+
+        @include dark-mode {
+            color: $dark-mode-body-color;
+        }
+    }
+
+    // Generic.Subheading
+    .gu {
+        color: $teal;
+        font-weight: $font-weight-mono-bold;
+
+        @include dark-mode {
+            color: $dark-mode-teal;
+        }
+    }
+
+    // Generic.Emph
+    .ge {
+        font-style: italic
+    }
+
+    // Generic.Strong
+    .gs {
+        font-weight: bold
+    }
+
+    // Generic.Inserted
+    .gi {
+        color: $green;
+
+        @include dark-mode {
+            color: $dark-mode-green;
+        }
+    }
+
+    // Generic.Deleted
+    .gd {
+        color: $red;
+
+        @include dark-mode {
+            color: $dark-mode-red;
+        }
+    }
+
+    // Generic.Prompt
+    .gp {
+        color: $green;
+        font-weight: $font-weight-mono-bold;
+
+        @include dark-mode {
+            color: $dark-mode-green;
+        }
+    }
+
+    // Keyword
+    // Keyword.Constant
+    // Keyword.Declaration
+    // Keyword.Reserved
+    .k,
+    .kc,
+    .kd,
+    .kr {
+        color: $purple;
+
+        @include dark-mode {
+            color: $dark-mode-purple;
+        }
+    }
+
+    // Keyword.Namespace
+    .kn {
+        color: $teal;
+
+        @include dark-mode {
+            color: $dark-mode-teal;
+        }
+    }
+
+    // Keyword.Pseudo
+    .kp {
+        color: $blue;
+
+        @include dark-mode {
+            color: $dark-mode-blue;
+        }
+    }
+
+    // Keyword.Type
+    .kt {
+        color: $yellow;
+
+        @include dark-mode {
+            color: $dark-mode-yellow;
+        }
+    }
+
+    // Name
+    .n {
+        color: $secondary;
+
+        @include dark-mode {
+            color: $dark-mode-secondary;
+        }
+    }
+
+    // Name.Attribute
+    // Name.Builtin
+    // Name.Function
+    // Name.Other
+    .na,
+    .nb,
+    .nf,
+    .nx {
+        color: $blue;
+
+        @include dark-mode {
+            color: $dark-mode-blue;
+        }
+    }
+
+    // Name.Class
+    .nc {
+        color: $yellow;
+
+        @include dark-mode {
+            color: $dark-mode-yellow;
+        }
+    }
+
+    // Name.Decorator
+    // Name.Tag
+    .nd,
+    .nt {
+        color: $teal;
+
+        @include dark-mode {
+            color: $dark-mode-teal;
+        }
+    }
+
+    // Name.Exception
+    // Name.Variable
+    // Name.Variable.Class
+    // Name.Variable.Global
+    // Name.Variable.Instance
+    .ne,
+    .nv,
+    .vc,
+    .vg,
+    .vi {
+        color: $red;
+
+        @include dark-mode {
+            color: $dark-mode-red;
+        }
+    }
+
+    // Name.Builtin.Pseudo
+    // Name.Entity
+    // Name.Label
+    // Name.Property
+    .bp,
+    .ni,
+    .nl,
+    .py {
+        color: $body-color;
+
+        @include dark-mode {
+            color: $dark-mode-body-color;
+        }
+    }
+
+    // Name.Namespace
+    // Name.Constant
+    .nn,
+    .no {
+        color: $yellow;
+
+        @include dark-mode {
+            color: $dark-mode-yellow;
+        }
+    }
+
+    // Operator
+    .o {
+        color: $body-color;
+
+        @include dark-mode {
+            color: $dark-mode-body-color;
+        }
+    }
+
+    // Operator.Word
+    .ow {
+        color: $teal;
+
+        @include dark-mode {
+            color: $dark-mode-teal;
+        }
+    }
+
+    // Punctuation
+    .p {
+        color: $secondary;
+
+        @include dark-mode {
+            color: $dark-mode-secondary;
+        }
+    }
+
+    // Literal
+    // Literal.Number
+    // Literal.Number.Float
+    // Literal.Number.Hex
+    // Literal.Number.Integer
+    // Literal.Number.Integer.Long
+    // Literal.Number.Oct
+    // Literal.String.Escape
+    // Literal.String.Interpol
+    .l,
+    .m,
+    .mf,
+    .mh,
+    .mi,
+    .il,
+    .mo,
+    .se,
+    .si {
+        color: $orange;
+
+        @include dark-mode {
+            color: $dark-mode-orange;
+        }
+    }
+
+    // Literal.String
+    // Literal.String.Single
+    // Literal.String.Double
+    // Literal.String.Backtick
+    // Literal.String.Heredoc
+    // Literal.String.Regex
+    // Literal.String.Symbol
+    // Literal.String.Other
+    // Literal.Date
+    .s,
+    .s1,
+    .s2,
+    .sb,
+    .sh,
+    .sr,
+    .ss,
+    .sx,
+    .ld {
+        color: $green;
+
+        @include dark-mode {
+            color: $dark-mode-green;
+        }
+    }
+
+    // Literal.String.Char
+    .sc {
+        color: $body-color;
+
+        @include dark-mode {
+            color: $dark-mode-body-color;
+        }
+    }
+
+    // Literal.String.Doc
+    .sd {
+        color: $secondary;
+
+        @include dark-mode {
+            color: $dark-mode-secondary;
+        }
+    }
+
+    // Text.Whitespace
+    .w {
+        color: $body-color;
+
+        @include dark-mode {
+            color: $dark-mode-body-color;
+        }
+    }
+}

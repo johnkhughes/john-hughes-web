@@ -1,0 +1,18 @@
+.post {
+    @extend .section;
+
+    position: relative;
+
+    &__heading-link {
+        @include heading-link;
+        @include stretched-link;
+    }
+
+    &__meta {
+        color: $secondary;
+
+        @include dark-mode {
+            color: $dark-mode-secondary;
+        }
+    }
+}

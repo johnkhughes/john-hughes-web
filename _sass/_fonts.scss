@@ -1,0 +1,89 @@
+@font-face {
+    font-family: "inter";
+    font-style:  normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/assets/fonts/inter-regular.woff2") format("woff2"),
+        url("/assets/fonts/inter-regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "inter";
+    font-style:  italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/assets/fonts/inter-regular-italic.woff2") format("woff2"),
+        url("/assets/fonts/inter-regular-italic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "inter";
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/assets/fonts/inter-bold.woff2") format("woff2"),
+        url("/assets/fonts/inter-bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "inter";
+    font-style:  italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/assets/fonts/inter-bold-italic.woff2") format("woff2"),
+        url("/assets/fonts/inter-bold-italic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "inter";
+    font-style:  normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url("/assets/fonts/inter-extra-bold.woff2") format("woff2"),
+        url("/assets/fonts/inter-extra-bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "inter";
+    font-style:  italic;
+    font-weight: 800;
+    font-display: swap;
+    src: url("/assets/fonts/inter-extra-bold-italic.woff2") format("woff2"),
+        url("/assets/fonts/inter-extra-bold-italic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "ibm plex mono";
+    font-style:  normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/assets/fonts/ibm-plex-mono-regular.woff2") format("woff2"),
+        url("/assets/fonts/ibm-plex-mono-regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "ibm plex mono";
+    font-style:  italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/assets/fonts/ibm-plex-mono-regular-italic.woff2") format("woff2"),
+        url("/assets/fonts/ibm-plex-mono-regular-italic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "ibm plex mono";
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/assets/fonts/ibm-plex-mono-bold.woff2") format("woff2"),
+        url("/assets/fonts/ibm-plex-mono-bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "ibm plex mono";
+    font-style:  italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/assets/fonts/ibm-plex-mono-bold-italic.woff2") format("woff2"),
+        url("/assets/fonts/ibm-plex-mono-bold-italic.woff") format("woff");
+}

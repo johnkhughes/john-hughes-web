@@ -1,0 +1,7 @@
+.section {
+    @include margin-y(2 * $spacer);
+
+    @include media-query(md) {
+        @include margin-y(3 * $spacer);
+    }
+}

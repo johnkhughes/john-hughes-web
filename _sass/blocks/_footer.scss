@@ -1,0 +1,14 @@
+.footer {
+    @extend .section;
+    @include font-size($font-scale-sm);
+
+    color: $secondary;
+
+    @include dark-mode {
+        color: $dark-mode-secondary;
+    }
+
+    &__wrap {
+        @extend .container;
+    }
+}

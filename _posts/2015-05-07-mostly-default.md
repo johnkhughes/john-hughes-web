@@ -8,7 +8,7 @@ excerpt: You might have noticed that the current iteration of my site doesn't ha
 You might have noticed that the current iteration of my site doesn't have much in the way of design. No colours, backgrounds, icons, images, or animations. In most respects, it is mostly text and mostly default.
 
 <figure>
-    <a href="/images/2015-05-07-screenshot.png"><img src="/images/2015-05-07-screenshot.png" alt="Site screenshot from May 2015" /></a>
+    <a href="/content/2015-05-07-screenshot.png"><img src="/content/2015-05-07-screenshot.png" alt="Site screenshot from May 2015" /></a>
     <figcaption>The current, mostly default appearance of my site</figcaption>
 </figure>
 

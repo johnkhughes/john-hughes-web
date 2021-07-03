@@ -1,0 +1,38 @@
+.button {
+    background: $link-color;
+    border-radius: $border-radius;
+    border: 0;
+    color: $white;
+    display: inline-block;
+    font-weight: $font-weight-bold;
+    outline-color: $link-color;
+    padding: 0.75rem 1.25rem;
+    text-decoration: none;
+
+    &:hover {
+        background: hover-color($link-color);
+        color: $white;
+        text-decoration: none;
+    }
+
+    &:active {
+        background: active-color($link-color);
+        color: $white;
+    }
+
+    @include dark-mode {
+        background: $dark-mode-link-color;
+        color: $black;
+        outline-color: $dark-mode-link-color;
+
+        &:hover {
+            background: hover-color($dark-mode-link-color);
+            color: $black;
+        }
+
+        &:focus {
+            background: active-color($dark-mode-link-color);
+            color: $black;
+        }
+    }
+}

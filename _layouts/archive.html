@@ -1,22 +1,30 @@
 {% include header.html %}
 
-<h1>{{ page.title | smartify }}</h1>
+<main class="main">
+    <div class="content">
+        <div class="content__wrap">
+            <h1>{{ page.title | smartify }}</h1>
 
-{{ content }}
+            {{ content }}
 
-{%- assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" -%}
+            {%- assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" -%}
 
-{% for year in years %}
-<h2>{{ year.name }}</h2>
+            {% for year in years %}
+                <div class="archive">
+                    <h2 class="archive__heading">{{ year.name }}</h2>
 
-<ol class="archive">
-    {% for post in year.items %}
-    <li>
-        <a href="{{ post.url }}">{{ post.title | smartify }}</a>
-        <span class="meta">&mdash; <time datetime="{{ post.date | date: '%F' }}">{{ post.date | date: '%-d %b %Y' }}</time></span>
-    </li>
-    {% endfor %}
-</ol>
-{% endfor %}
+                    <ol class="archive__list">
+                        {% for post in year.items %}
+                            <li class="archive__item">
+                                <a href="{{ post.url }}" class="archive__link">{{ post.title | smartify }}</a>
+                                <span class="archive__meta">&mdash; <time datetime="{{ post.date | date: '%F' }}">{{ post.date | date: site.date_format }}</time></span>
+                            </li>
+                        {% endfor %}
+                    </ol>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</main>
 
 {% include footer.html %}

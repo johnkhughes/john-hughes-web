@@ -1,0 +1,7 @@
+.content {
+    @extend .section;
+
+    &__wrap {
+        @extend .container;
+    }
+}

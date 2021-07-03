@@ -1,0 +1,26 @@
+.header {
+    @extend .section;
+
+    &__wrap {
+        @extend .container;
+    }
+
+    &__title {
+        @include font-size(1);
+
+        margin-bottom: 0.5em;
+    }
+
+    &__title-link {
+        @include silent-link;
+    }
+
+    &__title-description {
+        color: $secondary;
+        font-weight: $font-weight-normal;
+
+        @include dark-mode {
+            color: $dark-mode-secondary;
+        }
+    }
+}

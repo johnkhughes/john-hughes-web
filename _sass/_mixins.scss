@@ -1,40 +1,45 @@
-// Mixins
+@mixin media-query($min: 0, $max: null, $media: all, $after: null) {
+    $query: $media;
 
-// Media queries
-@mixin media($type: all, $size: false) {
-    $query: $type;
-    $sizes: (
-        octavo: "(min-width: 480px) and (min-height: 320px)",
-        quarto: "(min-width: 640px) and (min-height: 480px)",
-    );
-
-    @if $size and map-has-key($sizes, $size) {
-        $query: "#{$query} and #{map-get($sizes, $size)}";
+    @if map-get($breakpoints, $min) {
+        $min: map-get($breakpoints, $min);
     }
 
-    // If the media query is equivalent to no media query at all, output the
-    // content without a media query.
-    @if $query == all {
-        @content;
-    }
+    @if map-get($breakpoints, $max) {
+        $max: map-get($breakpoints, $max);
+        $tolerance: 1px;
 
-    @else {
-        @media #{$query} {
-            @content;
+        @if unit($max) != 'px' {
+            $tolerance: 0.001;
         }
+
+        $max: $max - $tolerance;
+    }
+
+    @if type-of($min) == 'number' and $min != 0 {
+        $query: "#{$query} and (min-width: #{$min})";
+    }
+
+    @if type-of($max) == 'number' and $max != 0 {
+        $query: "#{$query} and (max-width: #{$max})";
+    }
+
+    @if type-of($after) == 'string' {
+        $query: "#{$query} #{$after}";
+    }
+
+    @media #{$query} {
+        @content;
     }
 }
 
-// Font sizes
-@mixin font-size($n) {
-    $scales: (
-        duodecimo: 1.2,
-        octavo: 1.25,
-        quarto: 1.333,
-    );
+@mixin dark-mode($media: all) {
+    @media #{$media} and (prefers-color-scheme: dark) {
+        @content;
+    }
+}
 
-    // Negative font sizes are not responsive and cannot be smaller than a
-    // particular font size.
+@mixin font-size($n) {
     @if $n == -1 {
         font-size: 0.875em;
     }
@@ -44,36 +49,102 @@
     }
 
     @else {
-        @each $key, $scale in $scales {
-            $size: 1em * pow($scale, $n);
-
-            @if not map-has-key($scales, $key) {
-                font-size: $size;
-            }
-
-            @else {
-                @include media(all, $key) {
-                    font-size: $size;
-                }
+        @each $breakpoint, $scale in $type-scales {
+            @include media-query($breakpoint) {
+                font-size: 1em * pow($scale, $n);
             }
         }
     }
 }
 
-// Transitions
-@mixin transition-colors {
-    transition-duration: 200ms;
-    transition-property: background-color, border-color, color, opacity;
+@mixin margin-x($size) {
+    margin: {
+        left: $size;
+        right: $size;
+    }
 }
 
-// Links
-@mixin quiet-link {
-    @include transition-colors;
+@mixin margin-y($size) {
+    margin: {
+        top: $size;
+        bottom: $size;
+    }
+}
 
+@mixin padding-x($size) {
+    padding: {
+        left: $size;
+        right: $size;
+    }
+}
+
+@mixin padding-y($size) {
+    padding: {
+        top: $size;
+        bottom: $size;
+    }
+}
+
+@mixin transition-colors {
+    transition: {
+        duration: $transition-duration;
+        property: background-color, border-color, color, fill, opacity, text-decoration-color;
+    }
+}
+
+@mixin heading-link {
+    $decoration-opacity: 0.15;
+
+    color: $body-color;
+    display: inline-block;
+    text-decoration-line: underline;
+    text-decoration-color: rgba($body-color, $decoration-opacity);
+
+    &:hover {
+        color: $link-color;
+        text-decoration-color: rgba($link-color, $decoration-opacity);
+    }
+
+    @include dark-mode {
+        color: $dark-mode-body-color;
+        text-decoration-color: rgba($dark-mode-body-color, $decoration-opacity);
+
+        &:hover {
+            color: $dark-mode-link-color;
+            text-decoration-color: rgba($dark-mode-link-color, $decoration-opacity);
+        }
+    }
+}
+
+@mixin subtle-link {
+    text-decoration: none;
+}
+
+@mixin silent-link {
     color: inherit;
     text-decoration: none;
 
     &:hover {
         color: $link-color;
+        text-decoration: none;
+    }
+
+    @include dark-mode {
+        &:hover {
+            color: $dark-mode-link-color;
+        }
+    }
+}
+
+@mixin stretched-link {
+    &::after {
+        bottom: 0;
+        content: "";
+        left: 0;
+        pointer-events: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
     }
 }

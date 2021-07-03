@@ -1,0 +1,9 @@
+.meta {
+    @include font-size(-1);
+
+    color: $secondary;
+
+    @include dark-mode {
+        color: $dark-mode-secondary;
+    }
+}

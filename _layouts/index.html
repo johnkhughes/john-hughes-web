@@ -4,20 +4,28 @@
 
 {% include header.html title = title %}
 
-<h1>Latest posts</h1>
+<main class="main">
+    <div class="content">
+        <div class="content__wrap">
+            <h1>Latest posts</h1>
 
-{% for post in site.posts limit: 20 %}
-<article class="post">
-    <h2><a href="{{ post.url }}">{{ post.title | smartify }}</a></h2>
+            <div class="section">
+                {% for post in site.posts limit: 20 %}
+                    <article class="post">
+                        <h2 class="post__heading">
+                            <a href="{{ post.url }}" class="post__heading-link">{{ post.title | smartify }}</a>
+                        </h2>
 
-    <p>{{ post.excerpt | markdownify | strip_html | strip_newlines }}</p>
+                        <p class="post__excerpt"><span class="post__meta"><time datetime="{{ post.date | date: '%F' }}">{{ post.date | date: site.date_format }}</time> &mdash;</span> {{ post.excerpt | markdownify | strip_html | strip_newlines }}</p>
+                    </article>
+                {% endfor %}
+            </div>
 
-    <p class="meta"><time datetime="{{ post.date | date: '%F' }}">{{ post.date | date: "%-d %b %Y" }}</time></p>
-</article>
-{% endfor %}
-
-<div class="more">
-    <p><a href="{% link archive.md %}" class="button">Archive</a></p>
-</div>
+            <div class="section">
+                <p><a href="{% link archive.md %}" class="button">Archive</a></p>
+            </div>
+        </div>
+    </div>
+</main>
 
 {% include footer.html %}

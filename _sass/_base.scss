@@ -1,0 +1,348 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: $font-size-root;
+}
+
+body {
+    background: $body-bg;
+    color: $body-color;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    font-weight: $font-weight-base;
+    line-height: $line-height-base;
+    margin: 0;
+    padding: 0;
+
+    -webkit-text-size-adjust: none;
+
+    @include dark-mode {
+        background: $dark-mode-body-bg;
+        color: $dark-mode-body-color;
+    }
+}
+
+%heading-base {
+    margin: {
+        top: $headings-margin-top;
+        bottom: $headings-margin-bottom;
+    }
+
+    color: $headings-color;
+    line-height: $headings-line-height;
+    page-break-after: avoid;
+
+    @include dark-mode {
+        color: $dark-mode-headings-color;
+    }
+}
+
+%heading {
+    @extend %heading-base;
+
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+}
+
+%heading-sm {
+    @extend %heading-base;
+
+    font-family: inherit;
+    font-style: italic;
+    font-weight: inherit;
+}
+
+h1 {
+    @extend %heading;
+    @include font-size($h1-font-scale);
+}
+
+h2 {
+    @extend %heading;
+    @include font-size($h2-font-scale);
+}
+
+h3 {
+    @extend %heading;
+    @include font-size($h3-font-scale);
+}
+
+h4 {
+    @extend %heading;
+    @include font-size($h4-font-scale);
+}
+
+h5 {
+    @extend %heading;
+    @include font-size($h5-font-scale);
+}
+
+h6 {
+    @extend %heading-sm;
+    @include font-size($h6-font-scale);
+}
+
+p {
+    margin: {
+        top: $paragraph-margin-top;
+        bottom: $paragraph-margin-bottom;
+    }
+}
+
+hr {
+    border: {
+        top: $border-width solid $border-color;
+        bottom: 0;
+    }
+
+    margin: {
+        top: $hr-margin-top;
+        bottom: $hr-margin-bottom;
+    }
+
+    @include dark-mode {
+        border-top-color: $dark-mode-border-color;
+    }
+}
+
+ol,
+ul {
+    margin: {
+        top: $paragraph-margin-top;
+        bottom: $paragraph-margin-bottom;
+    }
+
+    padding-left: $text-indent;
+
+    ol,
+    ul {
+        margin: 0;
+    }
+}
+
+dl {
+    margin: {
+        top: $paragraph-margin-top;
+        bottom: $paragraph-margin-bottom;
+    }
+}
+
+dt {
+    font-weight: $headings-font-weight;
+}
+
+dd {
+    margin-left: $text-indent;
+}
+
+blockquote {
+    margin: {
+        top: $paragraph-margin-top;
+        bottom: $paragraph-margin-bottom;
+        left: $text-indent / 2;
+        right: $text-indent / 2;
+    }
+
+    padding: {
+        left: calc(#{$text-indent / 2} - #{$border-width});
+        right: $text-indent / 2;
+    }
+
+    border-left: $border-color solid $border-width;
+
+    @include dark-mode {
+        border-left-color: $dark-mode-border-color;
+    }
+}
+
+address {
+    margin: {
+        top: $paragraph-margin-top;
+        bottom: $paragraph-margin-bottom;
+    }
+
+    font-style: inherit;
+    line-height: inherit;
+}
+
+cite,
+dfn,
+em,
+i,
+var {
+    font-style: italic;
+}
+
+b,
+strong {
+    font-weight: $font-weight-bold;
+}
+
+small {
+    @include font-size($font-scale-xs);
+}
+
+sub,
+sup {
+    @include font-size($font-scale-xs);
+
+    line-height: 0;
+}
+
+sub {
+    vertical-align: sub;
+}
+
+sup {
+    vertical-align: super;
+}
+
+a {
+    @include transition-colors;
+
+    color: $link-color;
+    outline-offset: 0.25rem;
+    text-decoration: $link-decoration;
+
+    &:focus {
+        outline: {
+            style: solid;
+            width: 2px;
+        }
+    }
+
+    &:hover {
+        color: $link-hover-color;
+        decoration: $link-hover-decoration;
+    }
+
+    @include dark-mode {
+        color: $dark-mode-link-color;
+
+        &:hover {
+            color: $dark-mode-link-hover-color;
+        }
+    }
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: $font-family-mono;
+    font-size: $font-size-mono;
+}
+
+pre {
+    margin: {
+        top: $pre-margin-top;
+        bottom: $pre-margin-bottom;
+    }
+
+    padding: $pre-padding;
+    white-space: pre-wrap;
+
+    @media screen {
+        background: $light;
+        border-radius: $border-radius;
+        padding: max($pre-margin-top, $pre-margin-bottom);
+    }
+
+    @include dark-mode(screen) {
+        background: $dark-mode-light;
+    }
+
+    code,
+    kbd,
+    samp {
+        font-size: 1em;
+    }
+}
+
+img {
+    height: auto;
+    max-height: none;
+    max-width: 100%;
+    width: auto;
+}
+
+figure {
+    margin: {
+        top: $paragraph-margin-top;
+        bottom: $paragraph-margin-bottom;
+        left: 0;
+        right: 0;
+    }
+
+    figcaption {
+        @include font-size($caption-font-scale);
+
+        font-family: $caption-font-family;
+        font-weight: $caption-font-weight;
+        line-height: $caption-line-height;
+        text-align: $caption-text-align;
+
+        &:not(:first-child) {
+            margin-top: $caption-margin;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: $caption-margin;
+        }
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    blockquote + figcaption {
+        text-align: right;
+    }
+}
+
+table {
+    margin: {
+        top: $table-margin-top;
+        bottom: $table-margin-bottom;
+        left: auto;
+        right: auto;
+    }
+
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: $table-border-width solid $table-border-color;
+
+    @include dark-mode {
+        border-color: $dark-mode-table-border-color;
+    }
+}
+
+td {
+    padding: $table-cell-padding;
+    text-align: $table-cell-text-align;
+    vertical-align: $table-cell-vertical-align;
+}
+
+th {
+    font-weight: $table-heading-font-weight;
+    padding: $table-heading-padding;
+    text-align: $table-heading-text-align;
+    vertical-align: $table-heading-vertical-align;
+}
+
+caption {
+    @include font-size($caption-font-scale);
+
+    caption-side: top;
+    font-family: $caption-font-family;
+    font-weight: $caption-font-weight;
+    line-height: $caption-line-height;
+    margin-bottom: $caption-margin;
+    text-align: $caption-text-align;
+}

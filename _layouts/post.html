@@ -1,9 +1,17 @@
 {% include header.html %}
 
-<h1>{{ page.title | smartify }}</h1>
+<main class="main">
+    <div class="content">
+        <div class="content__wrap">
+            <h1>{{ page.title | smartify }}</h1>
 
-{{ content }}
+            <div class="text">
+                {{ content }}
+            </div>
 
-<p class="meta"><time datetime="{{ page.date | date: '%F' }}">{{ page.date | date: "%-d %b %Y" }}</time></p>
+            <p class="meta">Posted on <time datetime="{{ page.date | date: '%F' }}">{{ page.date | date: site.date_format }}</time></p>
+        </div>
+    </div>
+</main>
 
 {% include footer.html %}
